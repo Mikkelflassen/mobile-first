@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness App</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="program-container">
+      <h2>Choose a Program:</h2>
+      <button class="program-btn" id="program1">
+        PUSH
+        <img src="assets/android-chrome-192x192.png" alt="Article Image" />
+      </button>
+      <button class="program-btn" id="program2">
+        PULL
+        <img src="assets/android-chrome-192x192.png" alt="Article Image" />
+      </button>
+      <button class="program-btn" id="program3">
+        LEGS
+        <img src="assets/android-chrome-192x192.png" alt="Article Image" />
+      </button>
+    </div>
+
+    <div class="exercise-container">
+      <h3>Exercises:</h3>
+      <ul id="exercise-list">
+        <!-- Exercises will be dynamically added here -->
+      </ul>
+    </div>
+    <div class="exercise-info">
+      <h3>Exercise Info:</h3>
+      <p id="exercise-description">Description:</p>
+
+      <div id="exercise-video"></div>
+      <div id="exercise-timer"></div>
+      <input type="text" id="weight" placeholder="Weight (lbs)" />
+      <input type="number" id="rep" placeholder="Reps" />
+      <input type="number" id="set" placeholder="Sets" />
+      <input type="text" id="input-field" placeholder="Goal" />
+      <button id="add-button">Set Goal</button>
+      <ul id="shopping-list"></ul>
+    </div>
+    <script src="program.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-database.js"></script>
+    <script src="firebase-config.js"></script>
+    <!-- Include your Firebase configuration file -->
+  </body>
+</html>

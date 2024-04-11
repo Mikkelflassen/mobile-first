@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness App</title>
+    <link rel="stylesheet" href="css/purefitness.css" />
+  </head>
+  <body>
+    <div class="program-list">
+      <h2>Choose a Program</h2>
+      <ul>
+        <li class="program" data-program="program1">Program 1</li>
+        <li class="program" data-program="program2">Program 2</li>
+        <li class="program" data-program="program3">Program 3</li>
+      </ul>
+    </div>
+
+    <div class="exercise-list">
+      <h2>Exercises</h2>
+      <div id="exercises-container"></div>
+    </div>
+
+    <div class="exercise-details">
+      <h2>Exercise Details</h2>
+      <p id="exercise-description"></p>
+      <video id="exercise-video" controls></video>
+      <button id="start-timer-btn">Start Timer</button>
+      <div id="exercise-timer"></div>
+      <input type="number" id="exercise-weight" placeholder="Weight" />
+      <input type="number" id="exercise-reps" placeholder="Reps" />
+      <input type="number" id="exercise-sets" placeholder="Sets" />
+    </div>
+
+    <script src="purefitness.js"></script>
+  </body>
+</html>

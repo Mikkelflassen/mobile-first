@@ -12,6 +12,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const exercises = {
     program1: [
       {
+        name: "Exercise 2",
+        description: "Description of Exercise 2",
+        videoUrl: "https://www.youtube.com/embed/rvHI6ZG4Jc4", // Replace VIDEO_ID with the actual YouTube video ID
+        duration: 300,
+      },
+      {
+        name: "Exercise 2",
+        description: "Description of Exercise 2",
+        videoUrl: "video2.mp4",
+        duration: 90,
+      },
+      {
+        name: "Exercise 3",
+        description: "Description of Exercise 3",
+        videoUrl: "video2.mp4",
+        duration: 90,
+      },
+      {
         name: "beach press",
         description: "Description of Exercise 1",
         videoUrl: "video1.mp4",
@@ -30,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         duration: 90,
       },
       {
-        name: "beach press",
+        name: "Exercise 1",
         description: "Description of Exercise 1",
         videoUrl: "video1.mp4",
         duration: 300,
@@ -69,6 +87,42 @@ document.addEventListener("DOMContentLoaded", function () {
         videoUrl: "video2.mp4",
         duration: 90,
       },
+      {
+        name: "Exercise 1",
+        description: "Description of Exercise 1",
+        videoUrl: "video1.mp4",
+        duration: 300,
+      },
+      {
+        name: "Exercise 2",
+        description: "Description of Exercise 2",
+        videoUrl: "video2.mp4",
+        duration: 90,
+      },
+      {
+        name: "Exercise 3",
+        description: "Description of Exercise 3",
+        videoUrl: "video2.mp4",
+        duration: 90,
+      },
+      {
+        name: "Exercise 1",
+        description: "Description of Exercise 1",
+        videoUrl: "video1.mp4",
+        duration: 300,
+      },
+      {
+        name: "Exercise 2",
+        description: "Description of Exercise 2",
+        videoUrl: "video2.mp4",
+        duration: 90,
+      },
+      {
+        name: "Exercise 3",
+        description: "Description of Exercise 3",
+        videoUrl: "video2.mp4",
+        duration: 90,
+      },
       // Add exercises for program 2
     ],
     program3: [
@@ -89,6 +143,42 @@ document.addEventListener("DOMContentLoaded", function () {
         description: "Description of Exercise 3",
         videoUrl: "video2.mp4",
         duration: 10,
+      },
+      {
+        name: "Exercise 1",
+        description: "Description of Exercise 1",
+        videoUrl: "video1.mp4",
+        duration: 300,
+      },
+      {
+        name: "Exercise 2",
+        description: "Description of Exercise 2",
+        videoUrl: "video2.mp4",
+        duration: 90,
+      },
+      {
+        name: "Exercise 3",
+        description: "Description of Exercise 3",
+        videoUrl: "video2.mp4",
+        duration: 90,
+      },
+      {
+        name: "Exercise 1",
+        description: "Description of Exercise 1",
+        videoUrl: "video1.mp4",
+        duration: 300,
+      },
+      {
+        name: "Exercise 2",
+        description: "Description of Exercise 2",
+        videoUrl: "video2.mp4",
+        duration: 90,
+      },
+      {
+        name: "Exercise 3",
+        description: "Description of Exercise 3",
+        videoUrl: "video2.mp4",
+        duration: 90,
       },
       // Add exercises for program 3
     ],

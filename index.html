@@ -11,13 +11,13 @@
       <h2>Choose a Program</h2>
       <ul>
         <li class="program" data-program="program1">
-          <img src="assets/Leg-day-muscles-worked.webp" alt="">
+          <img src="assets/muscles-worked-push-day.webp" alt="">
         </li>
         <li class="program" data-program="program2">
-          <img src="assets/Muscles-worked-on-pull-day-workout.webp" alt="">
+          <img src="assets/muscles-worked-pull-day.webp" alt="">
         </li>
         <li class="program" data-program="program3">
-          <img src="assets/Muscles-worked-on-push-day-workout.webp" alt=""></li>
+          <img src="assets/muscles-worked-leg-day.webp" alt=""></li>
       </ul>
     </div>
 
@@ -28,13 +28,17 @@
     <div class="exercise-details">
       <h2>Exercise Details</h2>
       <p id="exercise-description"></p>
-      <video id="exercise-video" controls></video>
+      <!--TODO-->
+      <iframe id="exercise-video" width="560" height="615"  frameborder="0" allowfullscreen></iframe>
+
       <br />
       <div id="exercise-timer"></div>
       <button id="start-timer-btn">Start Timer</button>
+      <br>
       <input type="number" id="exercise-weight" placeholder="Weight" />
       <input type="number" id="exercise-reps" placeholder="Reps" />
       <input type="number" id="exercise-sets" placeholder="Sets" />
+    
     </div>
 
     <script src="purefitness.js"></script>

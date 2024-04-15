@@ -35,13 +35,6 @@ body {
   border-radius: 5px; /* Add rounded corners to the images */
 }
 
-/* Adjustments for smaller screens */
-@media (max-width: 768px) {
-  .program-list li img {
-    width: 80px; /* Decrease image size on smaller screens */
-  }
-}
-
 .program-list li:hover {
   background-color: #9b2900;
 }
@@ -95,6 +88,33 @@ body {
   color: #007bff;
 }
 
+#exercise-video {
+  width: 100%; /* Ensure the video fills its container horizontally */
+  max-width: 100%; /* Ensure the video doesn't exceed its container's width */
+  height: calc(
+    100vw * 9 / 16
+  ); /* Set the height based on the width to maintain a 16:9 aspect ratio */
+  margin-bottom: 10px; /* Add bottom margin for spacing */
+  position: relative; /* Ensure proper positioning */
+}
+
+#exercise-video iframe {
+  width: 100%; /* Ensure the iframe fills its container horizontally */
+  height: 100%; /* Ensure the iframe fills its container vertically */
+}
+
+@media (min-width: 769px) {
+  #exercise-video {
+    width: 100%; /* Ensure the video fills its container horizontally */
+    max-width: 50%; /* Ensure the video doesn't exceed its container's width */
+    height: calc(
+      50vw * 9 / 16
+    ); /* Set the height based on 50% of the viewport width to maintain a 16:9 aspect ratio */
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+    position: relative; /* Ensure proper positioning */
+  }
+}
+
 /* Style for input fields */
 input[type="number"] {
   width: 50%; /* Make input fields full-width */
@@ -128,47 +148,10 @@ input[type="number"] {
 #start-timer-btn:hover {
   background-color: #0056b3; /* Change background color on hover */
 }
-#exercise-video {
-  width: 50%;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-@media (max-width: 070px) {
-  .program-list {
-    margin-bottom: 20px;
-  }
-
-  .program-list ul {
-    list-style-type: none;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-  }
-
-  .program-list li {
-    cursor: pointer;
-
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 70px;
-    width: 80%;
-    transition: background-color 0.3s ease;
-  }
-
-  .program-list li:hover {
-    background-color: #0056b3;
-  }
-}
 
 /* Mobile styles */
 @media (max-width: 768px) {
   .program-list {
-    margin-bottom: 0px;
   }
 
   .program-list ul {
@@ -179,10 +162,10 @@ input[type="number"] {
   .program-list li {
     cursor: pointer;
     background-color: #007bff;
-    color: #fff;
     width: 50%;
     height: auto;
     transition: background-color 0.3s ease;
+    margin: 7px;
   }
 
   .program-list li:hover {
@@ -193,57 +176,6 @@ input[type="number"] {
     width: 100%; /* Adjust the width of the images */
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px; /* Add rounded corners to the images */
-  }
-
-  .exercise-details {
-    padding: 20px;
-  }
-
-  .exercise-details input {
-    margin: 100px;
-  }
-
-  #exercise-video {
-    width: 90%;
-    height: 300px;
-    margin-bottom: 20px;
-  }
-  input[type="number"] {
-    width: 90%; /* Make input fields full-width */
-    padding: 10px; /* Add padding */
-    margin-bottom: 10px; /* Add spacing between input fields */
-    border: 1px solid #ccc; /* Add border */
-    border-radius: 5px; /* Add rounded corners */
-    box-sizing: border-box; /* Include padding and border in width calculation */
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Style for placeholder text */
-  ::placeholder {
-    color: #999; /* Change placeholder text color */
-  }
-
-  /* Style for button */
-  #start-timer-btn {
-    background-color: #007bff; /* Set background color */
-    color: #fff; /* Set text color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Add rounded corners */
-    padding: 10px 20px; /* Add padding */
-    cursor: pointer; /* Add cursor pointer on hover */
-    transition: background-color 0.3s ease; /* Add smooth transition */
-    margin-bottom: 10px;
-    margin-top: 10px;
-  }
-
-  #start-timer-btn:hover {
-    background-color: #0056b3; /* Change background color on hover */
-  }
-  #exercise-video {
-    width: 90%;
-    height: auto;
-    margin-bottom: 20px;
   }
 }
 
@@ -278,11 +210,37 @@ input[type="number"] {
     margin-bottom: 10px;
     color: #555;
   }
-}
 
-/* Media query for smaller screens */
-@media (max-width: 1068px) {
-  .exercise {
-    padding: 10px;
+  input[type="number"] {
+    width: 100%; /* Make input fields full-width */
+    padding: 10px; /* Add padding */
+    margin-bottom: 10px; /* Add spacing between input fields */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add rounded corners */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Style for placeholder text */
+  ::placeholder {
+    color: #999; /* Change placeholder text color */
+  }
+
+  /* Style for button */
+  #start-timer-btn {
+    background-color: #007bff; /* Set background color */
+    color: #fff; /* Set text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    padding: 10px 20px; /* Add padding */
+    cursor: pointer; /* Add cursor pointer on hover */
+    transition: background-color 0.3s ease; /* Add smooth transition */
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  #start-timer-btn:hover {
+    background-color: #0056b3; /* Change background color on hover */
   }
 }

@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const exercises = {
     program1: [
       {
-        name: "Exercise 2",
+        name: "bench press",
         description: "Description of Exercise 2",
         videoUrl: "https://www.youtube.com/embed/rvHI6ZG4Jc4", // Replace VIDEO_ID with the actual YouTube video ID
         duration: 300,

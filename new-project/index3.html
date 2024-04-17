@@ -5,93 +5,235 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fitness App</title>
     <link rel="stylesheet" href="css.css" />
+    <style>
+      /* Additional CSS styles */
+      .exercise-details {
+        display: none;
+        margin-top: 10px;
+      }
+    </style>
   </head>
   <body>
     <div class="program-list">
       <h2>Choose a Program</h2>
       <ul>
-        <li class="program" data-program="program1">Program 1</li>
-        <li class="program" data-program="program2">Program 2</li>
-        <li class="program" data-program="program3">Program 3</li>
+        <li class="program" data-program="program1">
+          <img src="assets/muscles-worked-push-day.webp" alt="Push Day" />
+        </li>
+        <li class="program" data-program="program2">
+          <img src="assets/muscles-worked-pull-day.webp" alt="Pull Day" />
+        </li>
+        <li class="program" data-program="program3">
+          <img src="assets/muscles-worked-leg-day.webp" alt="Leg Day" />
+        </li>
       </ul>
     </div>
 
-    <div class="exercise-list">
-      <div id="exercises-container">
-        <!-- Program 1 Exercises -->
-        <div class="exercise-container program1">
-          <h2>Program 1 Exercises</h2>
-          <ul>
-            <li
-              class="exercise"
-              data-description="Strengthens core muscles and improves balance"
-            >
-              Crunches
-            </li>
-            <li
-              class="exercise"
-              data-description="Targets the chest, shoulders, and triceps"
-            >
-              Push-ups
-            </li>
-            <li
-              class="exercise"
-              data-description="Works the quadriceps, hamstrings, and glutes"
-            >
-              Squats
-            </li>
-          </ul>
-        </div>
-        <!-- Program 2 Exercises -->
-        <div class="exercise-container program2">
-          <h2>Program 2 Exercises</h2>
-          <ul>
-            <li
-              class="exercise"
-              data-description="Targets the back, biceps, and forearms"
-            >
-              Pull-ups
-            </li>
-            <li
-              class="exercise"
-              data-description="Strengthens the back and shoulders"
-            >
-              Rows
-            </li>
-            <li
-              class="exercise"
-              data-description="Improves grip strength and forearm muscles"
-            >
-              Deadlifts
-            </li>
-          </ul>
-        </div>
-        <!-- Program 3 Exercises -->
-        <div class="exercise-container program3">
-          <h2>Program 3 Exercises</h2>
-          <ul>
-            <li class="exercise" data-description="Targets the legs and glutes">
-              Lunges
-            </li>
-            <li class="exercise" data-description="Works the calves">
-              Calf Raises
-            </li>
-            <li
-              class="exercise"
-              data-description="Improves lower body strength and power"
-            >
-              Leg Press
-            </li>
-          </ul>
-        </div>
-      </div>
+    <!-- Exercise lists for each program -->
+    <div class="exercise-list" id="program1-exercises" style="display: none">
+      <h3>Push Day Exercises</h3>
+      <ul>
+        <!-- start of details-->
+        <li class="exercise">
+          Bench Press
+          <div class="exercise-details" style="display: none">
+            <h4>Bench Press Details</h4>
+            <p>Description: bench press is a good exercise</p>
+            <div class="exercise-details-bench-press">
+              <p id="exercise-description"></p>
+
+              <div class="exercise-timer">01:30</div>
+              <!-- Display the timer here -->
+              <button class="start-timer-btn" data-duration="90">
+                Start Timer
+              </button>
+              <!-- Set initial duration here -->
+
+              <div class="container">
+                <input type="text" id="input-weight-1" placeholder="weight" />
+                <button id="add-exercise-button-1">Add new weight</button>
+                <ul id="workout-list-1"></ul>
+
+                <input type="text" id="input-reps-2" placeholder="reps" />
+                <button id="add-exercise-button-2">Add new rep count</button>
+                <ul id="workout-list-2"></ul>
+
+                <input type="text" id="input-sets-3" placeholder="sets" />
+                <button id="add-exercise-button-3">Add new set count</button>
+                <ul id="workout-list-3"></ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          Dips
+          <div class="exercise-details" style="display: none">
+            <h4>Dips Details</h4>
+            <p>Description: Dips is a good exercise</p>
+            <div class="exercise-details-bench-press">
+              <p id="exercise-description"></p>
+
+              <div class="exercise-timer">01:00</div>
+              <!-- Display the timer here -->
+              <button class="start-timer-btn" data-duration="60">
+                Start Timer
+              </button>
+              <!-- Set initial duration here -->
+
+              <div class="container">
+                <input type="text" id="input-weight-4" placeholder="weight" />
+                <button id="add-exercise-button-4">Add new weight</button>
+                <ul id="workout-list-4"></ul>
+
+                <input type="text" id="input-reps-5" placeholder="reps" />
+                <button id="add-exercise-button-5">Add new rep count</button>
+                <ul id="workout-list-5"></ul>
+
+                <input type="text" id="input-sets-6" placeholder="sets" />
+                <button id="add-exercise-button-6">Add new set count</button>
+                <ul id="workout-list-6"></ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- end of details-->
+        <!-- start of details-->
+        <li class="exercise">
+          Dumbbell Shoulder Press
+          <div class="exercise-details" style="display: none">
+            <h4>Dumbbell Shoulder Press Details</h4>
+            <p>Description: Dumbbell Shoulder Press is a good exercise</p>
+            <div class="exercise-details-bench-press">
+              <p id="exercise-description"></p>
+
+              <div class="exercise-timer">02:00</div>
+              <!-- Display the timer here -->
+              <button class="start-timer-btn" data-duration="120">
+                Start Timer
+              </button>
+              <!-- Set initial duration here -->
+
+              <div class="container">
+                <input type="text" id="input-weight-7" placeholder="weight" />
+                <button id="add-exercise-button-7">Add new weight</button>
+                <ul id="workout-list-7"></ul>
+
+                <input type="text" id="input-reps-8" placeholder="reps" />
+                <button id="add-exercise-button-8">Add new rep count</button>
+                <ul id="workout-list-8"></ul>
+
+                <input type="text" id="input-sets-9" placeholder="sets" />
+                <button id="add-exercise-button-9">Add new set count</button>
+                <ul id="workout-list-9"></ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- end of details-->
+      </ul>
     </div>
 
-    <div class="exercise-details">
-      <h2>Exercise Details</h2>
+    <div class="exercise-list" id="program2-exercises" style="display: none">
+      <h3>Pull Day Exercises</h3>
+      <ul>
+        <!-- start of details-->
+        <li class="exercise">
+          Push-ups
+          <div class="exercise-details" style="display: none">
+            <h4>Push-Ups Details</h4>
+            <p>Description: Push-Ups is a good exercise</p>
+            <div class="exercise-details-bench-press">
+              <p id="exercise-description"></p>
+
+              <div class="exercise-timer">01:30</div>
+              <!-- Display the timer here -->
+              <button class="start-timer-btn" data-duration="90">
+                Start Timer
+              </button>
+              <!-- Set initial duration here -->
+
+              <div class="container">
+                <input type="text" id="input-weight-10" placeholder="weight" />
+                <button id="add-exercise-button-10">Add new weight</button>
+                <ul id="workout-list-10"></ul>
+
+                <input type="text" id="input-reps-11" placeholder="reps" />
+                <button id="add-exercise-button-11">Add new rep count</button>
+                <ul id="workout-list-11"></ul>
+
+                <input type="text" id="input-sets-12" placeholder="sets" />
+                <button id="add-exercise-button-12">Add new set count</button>
+                <ul id="workout-list-12"></ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- end of details-->
+        <li class="exercise" data-duration="150">
+          Bent Over Rows
+          <div class="exercise-details" style="display: none">
+            <h4>Bent Over Rows Details</h4>
+            <p>Description for Bent Over Rows</p>
+            <!-- Add more details if needed -->
+          </div>
+        </li>
+        <li class="exercise" data-duration="120">
+          Bicep Curls
+          <div class="exercise-details" style="display: none">
+            <h4>Bicep Curls Details</h4>
+            <p>Description for Bicep Curls</p>
+            <!-- Add more details if needed -->
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="exercise-list" id="program3-exercises" style="display: none">
+      <h3>Leg Day Exercises</h3>
+      <ul>
+        <li class="exercise" data-duration="180">
+          Squats
+          <div class="exercise-details" style="display: none">
+            <h4>Squats Details</h4>
+            <p>Description for Squats</p>
+            <!-- Add more details if needed -->
+          </div>
+        </li>
+        <li class="exercise" data-duration="150">
+          Lunges
+          <div class="exercise-details" style="display: none">
+            <h4>Lunges Details</h4>
+            <p>Description for Lunges</p>
+            <!-- Add more details if needed -->
+          </div>
+        </li>
+        <li class="exercise" data-duration="200">
+          Leg Press
+          <div class="exercise-details" style="display: none">
+            <h4>Leg Press Details</h4>
+            <p>Description for Leg Press</p>
+            <!-- Add more details if needed -->
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Exercise details -->
+    <div class="exercise-details" id="exercise-details">
+      <h3>Exercise Details</h3>
       <p id="exercise-description"></p>
+      <!-- Add more details if needed -->
     </div>
 
-    <script src="js.js"></script>
+    <script src="js.js" type="module"></script>
+    <script src="index3.js" type="module"></script>
+    <script src="timer.js" type="module"></script>
   </body>
 </html>

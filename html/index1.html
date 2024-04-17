@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <title>Workout Planner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <!-- Adjust the path as needed -->
+  </head>
+  <body>
+    <div class="container">
+      <img src="assets/goodFood.png" />
+      <!-- Assuming the "assets" folder is in the same directory as the HTML file -->
+      <input type="text" id="input-exercise" placeholder="Enter exercise" />
+      <button id="add-exercise-button">Add exercise</button>
+      <ul id="workout-list"></ul>
+    </div>
+    <!-- Importing Firebase JavaScript SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"></script>
+    <!-- Your custom JavaScript file -->
+    <script src="../js/index1.js" type="module"></script>
+    <!-- Adjust the path as needed -->
+  </body>
+</html>

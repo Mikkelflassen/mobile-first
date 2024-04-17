@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness App</title>
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+    <div class="program-list">
+      <h2>Choose a Program</h2>
+      <ul>
+        <li class="program" data-program="program1">Program 1</li>
+        <li class="program" data-program="program2">Program 2</li>
+        <li class="program" data-program="program3">Program 3</li>
+      </ul>
+    </div>
+
+    <div class="exercise-list">
+      <div id="exercises-container">
+        <!-- Program 1 Exercises -->
+        <div class="exercise-container program1">
+          <h2>Program 1 Exercises</h2>
+          <ul>
+            <li
+              class="exercise"
+              data-description="Strengthens core muscles and improves balance"
+            >
+              Crunches
+            </li>
+            <li
+              class="exercise"
+              data-description="Targets the chest, shoulders, and triceps"
+            >
+              Push-ups
+            </li>
+            <li
+              class="exercise"
+              data-description="Works the quadriceps, hamstrings, and glutes"
+            >
+              Squats
+            </li>
+          </ul>
+        </div>
+        <!-- Program 2 Exercises -->
+        <div class="exercise-container program2">
+          <h2>Program 2 Exercises</h2>
+          <ul>
+            <li
+              class="exercise"
+              data-description="Targets the back, biceps, and forearms"
+            >
+              Pull-ups
+            </li>
+            <li
+              class="exercise"
+              data-description="Strengthens the back and shoulders"
+            >
+              Rows
+            </li>
+            <li
+              class="exercise"
+              data-description="Improves grip strength and forearm muscles"
+            >
+              Deadlifts
+            </li>
+          </ul>
+        </div>
+        <!-- Program 3 Exercises -->
+        <div class="exercise-container program3">
+          <h2>Program 3 Exercises</h2>
+          <ul>
+            <li class="exercise" data-description="Targets the legs and glutes">
+              Lunges
+            </li>
+            <li class="exercise" data-description="Works the calves">
+              Calf Raises
+            </li>
+            <li
+              class="exercise"
+              data-description="Improves lower body strength and power"
+            >
+              Leg Press
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="exercise-details">
+      <h2>Exercise Details</h2>
+      <p id="exercise-description"></p>
+    </div>
+
+    <script src="js.js"></script>
+  </body>
+</html>

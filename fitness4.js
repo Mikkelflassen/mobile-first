@@ -8,6 +8,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const exerciseReps = document.getElementById("exercise-reps");
   const exerciseSets = document.getElementById("exercise-sets");
 
+  // Firebase configuration
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_AUTH_DOMAIN",
+    databaseURL: "YOUR_DATABASE_URL",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_STORAGE_BUCKET",
+    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+    appId: "YOUR_APP_ID",
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const database = firebase.database();
+
   // Sample data for exercises
   const exercises = {
     program1: [
@@ -23,165 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
         videoUrl: "video2.mp4",
         duration: 90,
       },
-      {
-        name: "Exercise 3",
-        description: "Description of Exercise 3",
-        videoUrl: "video2.mp4",
-        duration: 90,
-      },
-      {
-        name: "beach press",
-        description: "Description of Exercise 1",
-        videoUrl: "video1.mp4",
-        duration: 300,
-      },
-      {
-        name: "Exercise 2",
-        description: "Description of Exercise 2",
-        videoUrl: "video2.mp4",
-        duration: 90,
-      },
-      {
-        name: "Exercise 3",
-        description: "Description of Exercise 3",
-        videoUrl: "video2.mp4",
-        duration: 90,
-      },
-      {
-        name: "Exercise 1",
-        description: "Description of Exercise 1",
-        videoUrl: "video1.mp4",
-        duration: 300,
-      },
-      {
-        name: "Exercise 2",
-        description: "Description of Exercise 2",
-        videoUrl: "video2.mp4",
-        duration: 90,
-      },
-      {
-        name: "Exercise 3",
-        description: "Description of Exercise 3",
-        videoUrl: "video2.mp4",
-        duration: 90,
-      },
       // Add more exercises as needed
     ],
-
-    program2: [
-      {
-        name: "Exercise 1",
-        description: "Description of Exercise 1",
-        videoUrl: "video1.mp4",
-        duration: 300,
-      },
-      {
-        name: "Exercise 2",
-        description: "Description of Exercise 2",
-        videoUrl: "video2.mp4",
-        duration: 90,
-      },
-      {
-        name: "Exercise 3",
-        description: "Description of Exercise 3",
-        videoUrl: "video2.mp4",
-        duration: 90,
-      },
-      {
-        name: "Exercise 1",
-        description: "Description of Exercise 1",
-        videoUrl: "video1.mp4",
-        duration: 300,
-      },
-      {
-        name: "Exercise 2",
-        description: "Description of Exercise 2",
-        videoUrl: "video2.mp4",
-        duration: 90,
-      },
-      {
-        name: "Exercise 3",
-        description: "Description of Exercise 3",
-        videoUrl: "video2.mp4",
-        duration: 90,
-      },
-      {
-        name: "Exercise 1",
-        description: "Description of Exercise 1",
-        videoUrl: "video1.mp4",
-        duration: 300,
-      },
-      {
-        name: "Exercise 2",
-        description: "Description of Exercise 2",
-        videoUrl: "video2.mp4",
-        duration: 90,
-      },
-      {
-        name: "Exercise 3",
-        description: "Description of Exercise 3",
-        videoUrl: "video2.mp4",
-        duration: 90,
-      },
-      // Add exercises for program 2
-    ],
-    program3: [
-      {
-        name: "Exercise 1",
-        description: "Description of Exercise 1",
-        videoUrl: "video1.mp4",
-        duration: 300,
-      },
-      {
-        name: "Exercise 2",
-        description: "Description of Exercise 2",
-        videoUrl: "video2.mp4",
-        duration: 90,
-      },
-      {
-        name: "Exercise 3",
-        description: "Description of Exercise 3",
-        videoUrl: "video2.mp4",
-        duration: 10,
-      },
-      {
-        name: "Exercise 1",
-        description: "Description of Exercise 1",
-        videoUrl: "video1.mp4",
-        duration: 300,
-      },
-      {
-        name: "Exercise 2",
-        description: "Description of Exercise 2",
-        videoUrl: "video2.mp4",
-        duration: 90,
-      },
-      {
-        name: "Exercise 3",
-        description: "Description of Exercise 3",
-        videoUrl: "video2.mp4",
-        duration: 90,
-      },
-      {
-        name: "Exercise 1",
-        description: "Description of Exercise 1",
-        videoUrl: "video1.mp4",
-        duration: 300,
-      },
-      {
-        name: "Exercise 2",
-        description: "Description of Exercise 2",
-        videoUrl: "video2.mp4",
-        duration: 90,
-      },
-      {
-        name: "Exercise 3",
-        description: "Description of Exercise 3",
-        videoUrl: "video2.mp4",
-        duration: 90,
-      },
-      // Add exercises for program 3
-    ],
+    // Define exercises for other programs
   };
 
   // Global variable to hold the timer interval
@@ -226,7 +85,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     exerciseDescription.textContent = exercise.description;
     exerciseVideo.src = exercise.videoUrl;
-
+    exerciseWeight.value = "";
+    exerciseReps.value = "";
+    exerciseSets.value = "";
     document.querySelector(".exercise-details").style.display = "block";
 
     // Set initial duration
@@ -234,12 +95,16 @@ document.addEventListener("DOMContentLoaded", function () {
     startTimerBtn.dataset.duration = exercise.duration;
 
     // Add event listener to start timer button
-    startTimerBtn.addEventListener("click", startTimer);
+    startTimerBtn.addEventListener("click", function () {
+      startTimer(exercise);
+      // Save exercise data to Firebase when timer starts
+      saveExerciseData(exercise);
+    });
   }
 
   // Function to start the countdown timer
-  function startTimer() {
-    const duration = parseInt(this.dataset.duration); // Get initial duration from button data attribute
+  function startTimer(exercise) {
+    const duration = parseInt(exercise.duration); // Get duration from exercise data
     clearInterval(timerInterval); // Clear any existing timer
     let timer = duration;
     timerInterval = setInterval(function () {
@@ -255,6 +120,27 @@ document.addEventListener("DOMContentLoaded", function () {
         timer--;
       }
     }, 1000);
+  }
+
+  // Function to save exercise data to Firebase
+  function saveExerciseData(exercise) {
+    const program = document
+      .querySelector(".program.active")
+      .getAttribute("data-program");
+
+    const data = {
+      exerciseName: exercise.name,
+      weight: exerciseWeight.value,
+      reps: exerciseReps.value,
+      sets: exerciseSets.value,
+      timestamp: firebase.database.ServerValue.TIMESTAMP,
+    };
+
+    // Save data to Firebase database
+    firebase
+      .database()
+      .ref("programs/" + program)
+      .push(data);
   }
 
   // Event listener for exercise clicks
@@ -289,8 +175,9 @@ document.addEventListener("DOMContentLoaded", function () {
   function clearExerciseDetails() {
     exerciseDescription.textContent = "";
     exerciseVideo.src = "";
-    exerciseTimer.textContent = "";
-
+    exerciseWeight.value = "";
+    exerciseReps.value = "";
+    exerciseSets.value = "";
     document.querySelector(".exercise-details").style.display = "none";
   }
 

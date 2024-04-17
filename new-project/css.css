@@ -1,0 +1,93 @@
+/* CSS styles */
+
+/* Define styles for program list */
+.program-list {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.program-list ul {
+  list-style-type: none;
+  padding: 10px;
+  display: flex;
+}
+
+.program-list li {
+  cursor: pointer;
+  margin-bottom: 10px;
+  background-color: #ff4400;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+/* Style for program images */
+.program-list li img {
+  width: 100%;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.program-list li:hover {
+  background-color: #9b2900;
+}
+
+/* Define styles for exercise containers */
+.exercise-container {
+  display: none;
+}
+
+/* Define styles for exercises */
+.exercise-container h2 {
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.exercise-container ul {
+  list-style-type: none;
+}
+
+.exercise-container li {
+  background-color: #9d6e6e;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.exercise-container li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.exercise-container li .exercise-description {
+  display: none;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .program-list li {
+    cursor: pointer;
+    background-color: #007bff;
+    width: 50%;
+    height: auto;
+    transition: background-color 0.3s ease;
+    margin: 7px;
+  }
+
+  .program-list li:hover {
+    background-color: #0056b3;
+  }
+
+  .program-list li img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+}

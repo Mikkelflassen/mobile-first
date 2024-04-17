@@ -11,21 +11,23 @@
       <h2>Choose a Program</h2>
       <ul>
         <li class="program" data-program="program1">
-          <img src="assets/muscles-worked-push-day.webp" alt="">
+          <img src="assets/muscles-worked-push-day.webp" alt="" id="program1-image">
         </li>
         <li class="program" data-program="program2">
-          <img src="assets/muscles-worked-pull-day.webp" alt="">
+          <img src="assets/muscles-worked-pull-day.webp" alt="" id="program2-image">
         </li>
         <li class="program" data-program="program3">
-          <img src="assets/muscles-worked-leg-day.webp" alt=""></li>
+          <img src="assets/muscles-worked-leg-day.webp" alt="" id="program3-image">
+        </li>
       </ul>
     </div>
+    
 
     <div class="exercise-list">
       <div id="exercises-container"></h2></div>
     </div>
 
-    <div class="exercise-details">
+    <div class="exercise-details-bench-press">
       <h2>Exercise Details</h2>
       <p id="exercise-description"></p>
       <!--TODO-->
@@ -35,14 +37,51 @@
       <div id="exercise-timer"></div>
       <button id="start-timer-btn">Start Timer</button>
       <br>
-      <input type="number" id="exercise-weight" placeholder="Weight" />
-      <input type="number" id="exercise-reps" placeholder="Reps" />
-      <input type="number" id="exercise-sets" placeholder="Sets" />
-    
+      <div class="container">
+        <input type="text" id="input-weight-1" placeholder="weight" />
+        <button id="add-exercise-button-1">Add new weight</button>
+        <ul id="workout-list-1"></ul>
+  
+        <input type="text" id="input-reps-2" placeholder="reps" />
+        <button id="add-exercise-button-2">Add new rep count</button>
+        <ul id="workout-list-2"></ul>
+  
+        <input type="text" id="input-sets-3" placeholder="sets" />
+        <button id="add-exercise-button-3">Add new set count</button>
+        <ul id="workout-list-3"></ul>
+      </div>
+      <button id="save-exercise-btn">Save progress</button>
     </div>
 
+    <div class="exercise-details-dips">
+      <h2>Exercise Details</h2>
+      <p id="exercise-description2"></p>
+      <!--TODO-->
+      <iframe id="exercise-video2" width="560" height="615" frameborder="0" allowfullscreen></iframe>
+  
+      <br />
+      <div id="exercise-timer2"></div>
+      <button id="start-timer-btn">Start Timer</button>
+      <br>
+      <div class="container">
+          <input type="text" id="input-weight-4" placeholder="weight" />
+          <button id="add-exercise-button-4">Add new weight</button>
+          <ul id="workout-list-4"></ul>
+    
+          <input type="text" id="input-reps-5" placeholder="reps" />
+          <button id="add-exercise-button-5">Add new rep count</button>
+          <ul id="workout-list-5"></ul>
+    
+          <input type="text" id="input-sets-6" placeholder="sets" />
+          <button id="add-exercise-button-6">Add new set count</button>
+          <ul id="workout-list-6"></ul>
+      </div>
+      <button id="save-exercise-btn2">Save progress</button>
+  </div>
+  
     <script src="purefitness.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-database.js"></script>
+    <script src="index.js" type="module"></script>
+    
+    
   </body>
 </html>

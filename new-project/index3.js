@@ -23,9 +23,13 @@ const workoutList6InDB = ref(database, "program1/dips/sets");
 const workoutList7InDB = ref(database, "program1/dumbbellShoulderPress/weight");
 const workoutList8InDB = ref(database, "program1/dumbbellShoulderPress/reps");
 const workoutList9InDB = ref(database, "program1/dumbbellShoulderPress/sets");
-const workoutList10InDB = ref(database, "program2/pullUps/weight");
-const workoutList11InDB = ref(database, "program2/pullUps/reps");
-const workoutList12InDB = ref(database, "program2/pullUps/sets");
+const workoutList10InDB = ref(database, "program1/flyes/weight");
+const workoutList11InDB = ref(database, "program1/flyes/reps");
+const workoutList12InDB = ref(database, "program1/flyes/sets");
+
+//const workoutList13InDB = ref(database, "program2/pullUps/weight");
+//const workoutList11InDB = ref(database, "program2/pullUps/reps");
+//const workoutList12InDB = ref(database, "program2/pullUps/sets");
 
 function addExerciseToDatabase(inputValue, workoutListInDB) {
   // Remove existing values

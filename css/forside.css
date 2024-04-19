@@ -5,6 +5,7 @@ body, html {
     height: 100%;
     font-family: 'Arial', sans-serif;
     overflow-x: hidden;
+    background-color: #8b8b8b;
 }
 
 header {
@@ -23,7 +24,7 @@ header nav #menuToggle {
 }
 
 header nav #menuToggle a {
-    text-decoration: none;
+    text-decoration: none; 
     color: #232323;
     transition: color 0.3s ease;
 }
@@ -34,7 +35,7 @@ header nav #menuToggle span {
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    background: #cdcdcd;
+    background: #8b8b8b;
     border-radius: 3px;
     z-index: 1;
     transform-origin: 4px 0px;
@@ -61,12 +62,12 @@ header .hero-image img {
     display: block; /* adjust as needed, depending on your image */
 }
 
-header .hero-image h1 {
-    color: #fff;
-    font-size: 2em; /* adjust as needed for mobile */
+
+.logo {
     position: absolute;
-    padding: 0.5em 1em;
-    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+    max-width: 60%; /* Adjust as needed */
+    height: auto;
+    z-index: 3; /* Ensure the logo is on top */
 }
 
 

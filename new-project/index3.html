@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <title>App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fitness App</title>
+
     <link rel="stylesheet" href="css.css" />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="menu.css" />
+
     <style>
       /* Additional CSS styles */
       .exercise-details {
@@ -15,6 +20,25 @@
     </style>
   </head>
   <body>
+    <main>
+      <nav class="menu-container">
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="menu" id="menu">
+          <a href="#1">Forside</a>
+          <a href="#2">Inspiration</a>
+          <a href="new-project/index3.html">Træningsplaner</a>
+          <a href="#4">Vægt Træning</a>
+          <a href="#5">Kondition</a>
+          <a href="#6">Kost og Ernæring</a>
+          <a href="#7">Om Os</a>
+        </nav>
+      </nav>
+    </main>
+
     <div class="program-list">
       <h2>Vælg program</h2>
       <ul>
@@ -36,174 +60,520 @@
       <ul>
         <!-- start of details-->
         <li class="exercise">
-          <img
-            class="exerciseImg"
-            src="assets/muscles-worked-push-day.webp"
-            alt="Push Day"
-          />
-          <div class="exercise-details" style="display: none">
-            <h4>Bench Press Details</h4>
-            <p>Description: bench press is a good exercise</p>
-            <div class="exercise-details-bench-press">
-              <p id="exercise-description"></p>
+          <h2>Bench Press</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Bench Press Details</summary>
+            <p>
+              Description: The bench press is a classic chest exercise performed
+              with a barbell.
+            </p>
 
-              <div class="exercise-timer">01:30</div>
-              <!-- Display the timer here -->
-              <button class="start-timer-btn" data-duration="90">
-                Start Timer
-              </button>
-              <!-- Set initial duration here -->
+            <p id="exercise-description"></p>
 
-              <div class="container">
-                <input type="text" id="input-weight-1" placeholder="weight" />
-                <ul id="workout-list-1"></ul>
-                <button id="add-exercise-button-1">Add new weight</button>
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
 
-                <input type="text" id="input-reps-2" placeholder="reps" />
-                <ul id="workout-list-2"></ul>
-                <button id="add-exercise-button-2">Add new rep count</button>
+            <aside class="container">
+              <input type="text" id="input-weight-1" placeholder="weight" />
+              <ul id="workout-list-1"></ul>
+              <button id="add-exercise-button-1">Add new weight</button>
 
-                <input type="text" id="input-sets-3" placeholder="sets" />
-                <ul id="workout-list-3"></ul>
-                <button id="add-exercise-button-3">Add new set count</button>
-              </div>
-            </div>
+              <input type="text" id="input-reps-2" placeholder="reps" />
+              <ul id="workout-list-2"></ul>
+              <button id="add-exercise-button-2">Add new rep count</button>
+
+              <input type="text" id="input-sets-3" placeholder="sets" />
+              <ul id="workout-list-3"></ul>
+              <button id="add-exercise-button-3">Add new set count</button>
+            </aside>
+
             <div class="video-container">
               <iframe
-                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                src="https://www.youtube.com/embed/4Y2ZdHCOXok"
                 allowfullscreen
               ></iframe>
             </div>
-          </div>
+          </article>
         </li>
-
         <!-- end of details-->
 
         <!-- start of details-->
         <li class="exercise">
-          <img
-            class="exerciseImg"
-            src="assets/muscles-worked-push-day.webp"
-            alt="Push Day"
-          />
-          <div class="exercise-details" style="display: none">
-            <h4>Dips Details</h4>
-            <p>Description: Dips is a good exercise</p>
-            <div class="exercise-details-bench-press">
-              <p id="exercise-description"></p>
+          <h2>Dips</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Dips Details</summary>
+            <p>
+              Description: Dips are an effective exercise for targeting the
+              chest, shoulders, and triceps.
+            </p>
 
-              <div class="container">
-                <input type="text" id="input-weight-4" placeholder="weight" />
-                <ul id="workout-list-4"></ul>
-                <button id="add-exercise-button-4">Add new weight</button>
+            <p id="exercise-description"></p>
 
-                <input type="text" id="input-reps-5" placeholder="reps" />
-                <ul id="workout-list-5"></ul>
-                <button id="add-exercise-button-5">Add new rep count</button>
+            <time class="exercise-timer">02:00</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="120">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
 
-                <input type="text" id="input-sets-6" placeholder="sets" />
-                <ul id="workout-list-6"></ul>
-                <button id="add-exercise-button-6">Add new set count</button>
-              </div>
-            </div>
+            <aside class="container">
+              <input type="text" id="input-weight-4" placeholder="weight" />
+              <ul id="workout-list-4"></ul>
+              <button id="add-exercise-button-4">Add new weight</button>
+
+              <input type="text" id="input-reps-5" placeholder="reps" />
+              <ul id="workout-list-5"></ul>
+              <button id="add-exercise-button-5">Add new rep count</button>
+
+              <input type="text" id="input-sets-6" placeholder="sets" />
+              <ul id="workout-list-6"></ul>
+              <button id="add-exercise-button-6">Add new set count</button>
+            </aside>
+
             <div class="video-container">
               <iframe
                 src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
                 allowfullscreen
               ></iframe>
             </div>
-          </div>
+          </article>
         </li>
-
         <!-- end of details-->
+
         <!-- start of details-->
         <li class="exercise">
-          <img
-            class="exerciseImg"
-            src="assets/muscles-worked-push-day.webp"
-            alt="Push Day"
-          />
-          <div class="exercise-details" style="display: none">
-            <h4>Dumbbell Shoulder Press Details</h4>
-            <p>Description: Dumbbell Shoulder Press is a good exercise</p>
+          <h2>Dumbbell Shoulder Press</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Dumbbell Shoulder Press Details</summary>
+            <p>
+              Description: The dumbbell shoulder press targets the shoulders and
+              triceps and is performed with dumbbells.
+            </p>
 
-            <div class="exercise-details-bench-press">
-              <p id="exercise-description"></p>
+            <p id="exercise-description"></p>
 
-              <div class="exercise-timer">02:00</div>
-              <!-- Display the timer here -->
-              <button class="start-timer-btn" data-duration="120">
-                Start Timer
-              </button>
-              <!-- Set initial duration here -->
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
 
-              <div class="container">
-                <input type="text" id="input-weight-7" placeholder="weight" />
-                <ul id="workout-list-7"></ul>
-                <button id="add-exercise-button-7">Add new weight</button>
+            <aside class="container">
+              <input type="text" id="input-weight-7" placeholder="weight" />
+              <ul id="workout-list-7"></ul>
+              <button id="add-exercise-button-7">Add new weight</button>
 
-                <input type="text" id="input-reps-8" placeholder="reps" />
-                <ul id="workout-list-8"></ul>
-                <button id="add-exercise-button-8">Add new rep count</button>
+              <input type="text" id="input-reps-8" placeholder="reps" />
+              <ul id="workout-list-8"></ul>
+              <button id="add-exercise-button-8">Add new rep count</button>
 
-                <input type="text" id="input-sets-9" placeholder="sets" />
-                <ul id="workout-list-9"></ul>
-                <button id="add-exercise-button-9">Add new set count</button>
-              </div>
-            </div>
+              <input type="text" id="input-sets-9" placeholder="sets" />
+              <ul id="workout-list-9"></ul>
+              <button id="add-exercise-button-9">Add new set count</button>
+            </aside>
+
             <div class="video-container">
               <iframe
                 src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
                 allowfullscreen
               ></iframe>
             </div>
-          </div>
+          </article>
         </li>
-
         <!-- end of details-->
+
+        <!-- Add more exercises here -->
+
         <!-- start of details-->
         <li class="exercise">
-          <img
-            class="exerciseImg"
-            src="assets/muscles-worked-push-day.webp"
-            alt="Push Day"
-          />
-          <div class="exercise-details" style="display: none">
-            <h4>Bench Press Details</h4>
-            <p>Description: bench press is a good exercise</p>
-            <div class="exercise-details-bench-press">
-              <p id="exercise-description"></p>
+          <h2>Overhead Tricep Extension</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Overhead Tricep Extension Details</summary>
+            <p>
+              Description: The overhead tricep extension targets the triceps and
+              is performed with a dumbbell or cable machine.
+            </p>
 
-              <div class="exercise-timer">01:30</div>
-              <!-- Display the timer here -->
-              <button class="start-timer-btn" data-duration="90">
-                Start Timer
-              </button>
-              <!-- Set initial duration here -->
+            <p id="exercise-description"></p>
 
-              <div class="container">
-                <input type="text" id="input-weight-10" placeholder="weight" />
-                <ul id="workout-list-10"></ul>
-                <button id="add-exercise-button-10">Add new weight</button>
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
 
-                <input type="text" id="input-reps-11" placeholder="reps" />
-                <ul id="workout-list-11"></ul>
-                <button id="add-exercise-button-11">Add new rep count</button>
+            <aside class="container">
+              <input type="text" id="input-weight-10" placeholder="weight" />
+              <ul id="workout-list-10"></ul>
+              <button id="add-exercise-button-10">Add new weight</button>
 
-                <input type="text" id="input-sets-12" placeholder="sets" />
-                <ul id="workout-list-12"></ul>
-                <button id="add-exercise-button-12">Add new set count</button>
-              </div>
-            </div>
+              <input type="text" id="input-reps-11" placeholder="reps" />
+              <ul id="workout-list-11"></ul>
+              <button id="add-exercise-button-11">Add new rep count</button>
+
+              <input type="text" id="input-sets-12" placeholder="sets" />
+              <ul id="workout-list-12"></ul>
+              <button id="add-exercise-button-12">Add new set count</button>
+            </aside>
+
             <div class="video-container">
               <iframe
                 src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
                 allowfullscreen
               ></iframe>
             </div>
-          </div>
+          </article>
         </li>
+        <!-- end of details-->
 
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Chest Flyes</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Chest Flyes Details</summary>
+            <p>
+              Description: Chest flyes target the chest muscles and are usually
+              performed using dumbbells or a pec deck machine.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-13" placeholder="weight" />
+              <ul id="workout-list-13"></ul>
+              <button id="add-exercise-button-13">Add new weight</button>
+
+              <input type="text" id="input-reps-14" placeholder="reps" />
+              <ul id="workout-list-14"></ul>
+              <button id="add-exercise-button-14">Add new rep count</button>
+
+              <input type="text" id="input-sets-15" placeholder="sets" />
+              <ul id="workout-list-15"></ul>
+              <button id="add-exercise-button-15">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Incline Bench Press</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Incline Bench Press Details</summary>
+            <p>
+              Description: The incline bench press targets the upper chest and
+              shoulders and is performed on an inclined bench.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-16" placeholder="weight" />
+              <ul id="workout-list-16"></ul>
+              <button id="add-exercise-button-16">Add new weight</button>
+
+              <input type="text" id="input-reps-17" placeholder="reps" />
+              <ul id="workout-list-17"></ul>
+              <button id="add-exercise-button-17">Add new rep count</button>
+
+              <input type="text" id="input-sets-18" placeholder="sets" />
+              <ul id="workout-list-18"></ul>
+              <button id="add-exercise-button-18">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Tricep Dips</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Tricep Dips Details</summary>
+            <p>
+              Description: Tricep dips primarily target the triceps and are
+              performed using parallel bars or a dip station.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-19" placeholder="weight" />
+              <ul id="workout-list-19"></ul>
+              <button id="add-exercise-button-19">Add new weight</button>
+
+              <input type="text" id="input-reps-20" placeholder="reps" />
+              <ul id="workout-list-20"></ul>
+              <button id="add-exercise-button-20">Add new rep count</button>
+
+              <input type="text" id="input-sets-21" placeholder="sets" />
+              <ul id="workout-list-21"></ul>
+              <button id="add-exercise-button-21">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Overhead Dumbbell Tricep Extension</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Overhead Dumbbell Tricep Extension Details</summary>
+            <p>
+              Description: The overhead dumbbell tricep extension is a
+              unilateral exercise that targets the triceps.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-22" placeholder="weight" />
+              <ul id="workout-list-22"></ul>
+              <button id="add-exercise-button-22">Add new weight</button>
+
+              <input type="text" id="input-reps-23" placeholder="reps" />
+              <ul id="workout-list-23"></ul>
+              <button id="add-exercise-button-23">Add new rep count</button>
+
+              <input type="text" id="input-sets-24" placeholder="sets" />
+              <ul id="workout-list-24"></ul>
+              <button id="add-exercise-button-24">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Push-ups</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Push-ups Details</summary>
+            <p>
+              Description: Push-ups are a classic bodyweight exercise that
+              target the chest, shoulders, and triceps.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-25" placeholder="weight" />
+              <ul id="workout-list-25"></ul>
+              <button id="add-exercise-button-25">Add new weight</button>
+
+              <input type="text" id="input-reps-26" placeholder="reps" />
+              <ul id="workout-list-26"></ul>
+              <button id="add-exercise-button-26">Add new rep count</button>
+
+              <input type="text" id="input-sets-27" placeholder="sets" />
+              <ul id="workout-list-27"></ul>
+              <button id="add-exercise-button-27">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Arnold Press</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Arnold Press Details</summary>
+            <p>
+              Description: The Arnold press is a shoulder exercise that targets
+              the deltoid muscles and is performed using dumbbells.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-28" placeholder="weight" />
+              <ul id="workout-list-28"></ul>
+              <button id="add-exercise-button-28">Add new weight</button>
+
+              <input type="text" id="input-reps-29" placeholder="reps" />
+              <ul id="workout-list-29"></ul>
+              <button id="add-exercise-button-29">Add new rep count</button>
+
+              <input type="text" id="input-sets-30" placeholder="sets" />
+              <ul id="workout-list-30"></ul>
+              <button id="add-exercise-button-30">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Front Dumbbell Raise</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Front Dumbbell Raise Details</summary>
+            <p>
+              Description: The front dumbbell raise targets the front deltoids
+              and is performed by raising dumbbells in front of the body.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-34" placeholder="weight" />
+              <ul id="workout-list-34"></ul>
+              <button id="add-exercise-button-34">Add new weight</button>
+
+              <input type="text" id="input-reps-35" placeholder="reps" />
+              <ul id="workout-list-35"></ul>
+              <button id="add-exercise-button-35">Add new rep count</button>
+
+              <input type="text" id="input-sets-36" placeholder="sets" />
+              <ul id="workout-list-36"></ul>
+              <button id="add-exercise-button-36">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Close-Grip Bench Press</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Close-Grip Bench Press Details</summary>
+            <p>
+              Description: The close-grip bench press targets the triceps and is
+              performed with a narrower grip than the traditional bench press.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-37" placeholder="weight" />
+              <ul id="workout-list-37"></ul>
+              <button id="add-exercise-button-37">Add new weight</button>
+
+              <input type="text" id="input-reps-38" placeholder="reps" />
+              <ul id="workout-list-38"></ul>
+              <button id="add-exercise-button-38">Add new rep count</button>
+
+              <input type="text" id="input-sets-39" placeholder="sets" />
+              <ul id="workout-list-39"></ul>
+              <button id="add-exercise-button-39">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
         <!-- end of details-->
       </ul>
     </div>
@@ -213,84 +583,1055 @@
       <ul>
         <!-- start of details-->
         <li class="exercise">
-          Push-ups
-          <div class="exercise-details" style="display: none">
-            <h4>Push-Ups Details</h4>
-            <p>Description: Push-Ups is a good exercise</p>
-            <div class="exercise-details-bench-press">
-              <p id="exercise-description"></p>
+          <h2>Bent-Over Barbell Rows</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Bent-Over Barbell Rows Details</summary>
+            <p>
+              Description: Bent-over barbell rows target the upper back and lats
+              and are performed by rowing a barbell towards the lower chest.
+            </p>
 
-              <div class="exercise-timer">01:30</div>
-              <!-- Display the timer here -->
-              <button class="start-timer-btn" data-duration="90">
-                Start Timer
-              </button>
-              <!-- Set initial duration here -->
+            <p id="exercise-description"></p>
 
-              <div class="container">
-                <input type="text" id="input-weight-13" placeholder="weight" />
-                <button id="add-exercise-button-13">Add new weight</button>
-                <ul id="workout-list-13"></ul>
+            <time class="exercise-timer">02:00</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="120">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
 
-                <input type="text" id="input-reps-14" placeholder="reps" />
-                <button id="add-exercise-button-14">Add new rep count</button>
-                <ul id="workout-list-14"></ul>
+            <aside class="container">
+              <input type="text" id="input-weight-40" placeholder="weight" />
+              <ul id="workout-list-40"></ul>
+              <button id="add-exercise-button-40">Add new weight</button>
 
-                <input type="text" id="input-sets-15" placeholder="sets" />
-                <button id="add-exercise-button-15">Add new set count</button>
-                <ul id="workout-list-15"></ul>
-              </div>
+              <input type="text" id="input-reps-41" placeholder="reps" />
+              <ul id="workout-list-41"></ul>
+              <button id="add-exercise-button-41">Add new rep count</button>
+
+              <input type="text" id="input-sets-42" placeholder="sets" />
+              <ul id="workout-list-42"></ul>
+              <button id="add-exercise-button-42">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
             </div>
-          </div>
+          </article>
         </li>
-
         <!-- end of details-->
-        <li class="exercise" data-duration="150">
-          Bent Over Rows
-          <div class="exercise-details" style="display: none">
-            <h4>Bent Over Rows Details</h4>
-            <p>Description for Bent Over Rows</p>
-            <!-- Add more details if needed -->
-          </div>
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Face Pulls</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Face Pulls Details</summary>
+            <p>
+              Description: Face pulls target the rear delts and upper back and
+              are performed by pulling a rope attachment towards the face at
+              shoulder height.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-43" placeholder="weight" />
+              <ul id="workout-list-43"></ul>
+              <button id="add-exercise-button-43">Add new weight</button>
+
+              <input type="text" id="input-reps-44" placeholder="reps" />
+              <ul id="workout-list-44"></ul>
+              <button id="add-exercise-button-44">Add new rep count</button>
+
+              <input type="text" id="input-sets-45" placeholder="sets" />
+              <ul id="workout-list-45"></ul>
+              <button id="add-exercise-button-45">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
         </li>
-        <li class="exercise" data-duration="120">
-          Bicep Curls
-          <div class="exercise-details" style="display: none">
-            <h4>Bicep Curls Details</h4>
-            <p>Description for Bicep Curls</p>
-            <!-- Add more details if needed -->
-          </div>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Barbell Shrugs</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Barbell Shrugs Details</summary>
+            <p>
+              Description: Barbell shrugs target the trapezius muscles and are
+              performed by shrugging the shoulders while holding a barbell with
+              an overhand grip.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-46" placeholder="weight" />
+              <ul id="workout-list-46"></ul>
+              <button id="add-exercise-button-46">Add new weight</button>
+
+              <input type="text" id="input-reps-47" placeholder="reps" />
+              <ul id="workout-list-47"></ul>
+              <button id="add-exercise-button-47">Add new rep count</button>
+
+              <input type="text" id="input-sets-48" placeholder="sets" />
+              <ul id="workout-list-48"></ul>
+              <button id="add-exercise-button-48">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
         </li>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Rear Delt Flyes</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Rear Delt Flyes Details</summary>
+            <p>
+              Description: Rear delt flyes target the rear deltoids and are
+              performed by raising dumbbells to the sides while bent over at the
+              waist.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-49" placeholder="weight" />
+              <ul id="workout-list-49"></ul>
+              <button id="add-exercise-button-49">Add new weight</button>
+
+              <input type="text" id="input-reps-50" placeholder="reps" />
+              <ul id="workout-list-50"></ul>
+              <button id="add-exercise-button-50">Add new rep count</button>
+
+              <input type="text" id="input-sets-51" placeholder="sets" />
+              <ul id="workout-list-51"></ul>
+              <button id="add-exercise-button-51">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details--><!-- start of details-->
+        <li class="exercise">
+          <h2>Hammer Curls</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Hammer Curls Details</summary>
+            <p>
+              Description: Hammer curls target the biceps brachii and brachialis
+              muscles and are performed with a neutral grip, palms facing each
+              other.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-52" placeholder="weight" />
+              <ul id="workout-list-52"></ul>
+              <button id="add-exercise-button-52">Add new weight</button>
+
+              <input type="text" id="input-reps-53" placeholder="reps" />
+              <ul id="workout-list-53"></ul>
+              <button id="add-exercise-button-53">Add new rep count</button>
+
+              <input type="text" id="input-sets-54" placeholder="sets" />
+              <ul id="workout-list-54"></ul>
+              <button id="add-exercise-button-54">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Barbell Bicep Curls</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Barbell Bicep Curls Details</summary>
+            <p>
+              Description: Barbell bicep curls primarily target the biceps
+              brachii muscles and are performed by curling a barbell with an
+              underhand grip.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-55" placeholder="weight" />
+              <ul id="workout-list-55"></ul>
+              <button id="add-exercise-button-55">Add new weight</button>
+
+              <input type="text" id="input-reps-56" placeholder="reps" />
+              <ul id="workout-list-56"></ul>
+              <button id="add-exercise-button-56">Add new rep count</button>
+
+              <input type="text" id="input-sets-57" placeholder="sets" />
+              <ul id="workout-list-57"></ul>
+              <button id="add-exercise-button-57">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Deadlifts</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Deadlifts Details</summary>
+            <p>
+              Description: Deadlifts are a compound exercise that primarily
+              target the lower back, but also engage the entire posterior chain,
+              including the lats and biceps.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">02:00</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="120">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-58" placeholder="weight" />
+              <ul id="workout-list-58"></ul>
+              <button id="add-exercise-button-58">Add new weight</button>
+
+              <input type="text" id="input-reps-59" placeholder="reps" />
+              <ul id="workout-list-59"></ul>
+              <button id="add-exercise-button-59">Add new rep count</button>
+
+              <input type="text" id="input-sets-60" placeholder="sets" />
+              <ul id="workout-list-60"></ul>
+              <button id="add-exercise-button-60">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>T-Bar Rows</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>T-Bar Rows Details</summary>
+            <p>
+              Description: T-bar rows are a compound exercise that target the
+              upper back, lats, and biceps, and are performed using a T-bar row
+              machine or a barbell.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-61" placeholder="weight" />
+              <ul id="workout-list-61"></ul>
+              <button id="add-exercise-button-61">Add new weight</button>
+
+              <input type="text" id="input-reps-62" placeholder="reps" />
+              <ul id="workout-list-62"></ul>
+              <button id="add-exercise-button-62">Add new rep count</button>
+
+              <input type="text" id="input-sets-63" placeholder="sets" />
+              <ul id="workout-list-63"></ul>
+              <button id="add-exercise-button-63">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Chin-ups</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Chin-ups Details</summary>
+            <p>
+              Description: Chin-ups are a variation of the pull-up exercise,
+              targeting the back and biceps, performed with a supinated grip
+              (palms facing towards you).
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">03:00</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="180">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-64" placeholder="weight" />
+              <ul id="workout-list-64"></ul>
+              <button id="add-exercise-button-64">Add new weight</button>
+
+              <input type="text" id="input-reps-65" placeholder="reps" />
+              <ul id="workout-list-65"></ul>
+              <button id="add-exercise-button-65">Add new rep count</button>
+
+              <input type="text" id="input-sets-66" placeholder="sets" />
+              <ul id="workout-list-66"></ul>
+              <button id="add-exercise-button-66">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Seated Cable Rows</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Seated Cable Rows Details</summary>
+            <p>
+              Description: Seated cable rows target the upper back, lats, and
+              biceps, and are performed using a cable machine with a close grip
+              handle attachment.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">02:00</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="120">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-67" placeholder="weight" />
+              <ul id="workout-list-67"></ul>
+              <button id="add-exercise-button-67">Add new weight</button>
+
+              <input type="text" id="input-reps-68" placeholder="reps" />
+              <ul id="workout-list-68"></ul>
+              <button id="add-exercise-button-68">Add new rep count</button>
+
+              <input type="text" id="input-sets-69" placeholder="sets" />
+              <ul id="workout-list-69"></ul>
+              <button id="add-exercise-button-69">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Preacher Curls</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Preacher Curls Details</summary>
+            <p>
+              Description: Preacher curls isolate the biceps brachii muscles and
+              are performed using a preacher curl bench and a barbell or
+              dumbbells.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-70" placeholder="weight" />
+              <ul id="workout-list-70"></ul>
+              <button id="add-exercise-button-70">Add new weight</button>
+
+              <input type="text" id="input-reps-71" placeholder="reps" />
+              <ul id="workout-list-71"></ul>
+              <button id="add-exercise-button-71">Add new rep count</button>
+
+              <input type="text" id="input-sets-72" placeholder="sets" />
+              <ul id="workout-list-72"></ul>
+              <button id="add-exercise-button-72">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Hammer Curls</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Hammer Curls Details</summary>
+            <p>
+              Description: Hammer curls primarily target the brachialis and
+              brachioradialis muscles of the forearm, with secondary emphasis on
+              the biceps.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-73" placeholder="weight" />
+              <ul id="workout-list-73"></ul>
+              <button id="add-exercise-button-73">Add new weight</button>
+
+              <input type="text" id="input-reps-74" placeholder="reps" />
+              <ul id="workout-list-74"></ul>
+              <button id="add-exercise-button-74">Add new rep count</button>
+
+              <input type="text" id="input-sets-75" placeholder="sets" />
+              <ul id="workout-list-75"></ul>
+              <button id="add-exercise-button-75">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
       </ul>
     </div>
 
     <div class="exercise-list" id="program3-exercises" style="display: none">
       <h3>Leg Day Exercises</h3>
       <ul>
-        <li class="exercise" data-duration="180">
-          Squats
-          <div class="exercise-details" style="display: none">
-            <h4>Squats Details</h4>
-            <p>Description for Squats</p>
-            <!-- Add more details if needed -->
-          </div>
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Leg Extensions</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Leg Extensions details</summary>
+            <p>
+              Description: Leg extensions is a machine-based exercise that
+              primarily targets the quadriceps.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-76" placeholder="weight" />
+              <ul id="workout-list-76"></ul>
+              <button id="add-exercise-button-76">Add new weight</button>
+
+              <input type="text" id="input-reps-77" placeholder="reps" />
+              <ul id="workout-list-77"></ul>
+              <button id="add-exercise-button-77">Add new rep count</button>
+
+              <input type="text" id="input-sets-78" placeholder="sets" />
+              <ul id="workout-list-78"></ul>
+              <button id="add-exercise-button-78">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
         </li>
-        <li class="exercise" data-duration="150">
-          Lunges
-          <div class="exercise-details" style="display: none">
-            <h4>Lunges Details</h4>
-            <p>Description for Lunges</p>
-            <!-- Add more details if needed -->
-          </div>
+        <!-- end of details-->
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Leg Press</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Leg Press Details</summary>
+            <p>
+              Description: Leg press is a machine-based exercise that primarily
+              targets the quadriceps, hamstrings, and glutes.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-79" placeholder="weight" />
+              <ul id="workout-list-79"></ul>
+              <button id="add-exercise-button-79">Add new weight</button>
+
+              <input type="text" id="input-reps-80" placeholder="reps" />
+              <ul id="workout-list-80"></ul>
+              <button id="add-exercise-button-80">Add new rep count</button>
+
+              <input type="text" id="input-sets-81" placeholder="sets" />
+              <ul id="workout-list-81"></ul>
+              <button id="add-exercise-button-81">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
         </li>
-        <li class="exercise" data-duration="200">
-          Leg Press
-          <div class="exercise-details" style="display: none">
-            <h4>Leg Press Details</h4>
-            <p>Description for Leg Press</p>
-            <!-- Add more details if needed -->
-          </div>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Leg Curl</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Leg Curl Details</summary>
+            <p>
+              Description: Leg curl is an isolation exercise targeting the
+              hamstrings, helping to strengthen and define the muscles in the
+              back of the thigh.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-82" placeholder="weight" />
+              <ul id="workout-list-82"></ul>
+              <button id="add-exercise-button-82">Add new weight</button>
+
+              <input type="text" id="input-reps-83" placeholder="reps" />
+              <ul id="workout-list-83"></ul>
+              <button id="add-exercise-button-83">Add new rep count</button>
+
+              <input type="text" id="input-sets-84" placeholder="sets" />
+              <ul id="workout-list-84"></ul>
+              <button id="add-exercise-button-84">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
         </li>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Calf Raises</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Calf Raises Details</summary>
+            <p>
+              Description: Calf raises target the calf muscles, helping to
+              strengthen and define the lower leg.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-85" placeholder="weight" />
+              <ul id="workout-list-85"></ul>
+              <button id="add-exercise-button-85">Add new weight</button>
+
+              <input type="text" id="input-reps-86" placeholder="reps" />
+              <ul id="workout-list-86"></ul>
+              <button id="add-exercise-button-86">Add new rep count</button>
+
+              <input type="text" id="input-sets-87" placeholder="sets" />
+              <ul id="workout-list-87"></ul>
+              <button id="add-exercise-button-87">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Barbell Squats</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Barbell Squats Details</summary>
+            <p>
+              Description: Barbell squats are a compound exercise targeting the
+              quadriceps, hamstrings, glutes, and lower back, promoting overall
+              lower body strength and development.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-88" placeholder="weight" />
+              <ul id="workout-list-88"></ul>
+              <button id="add-exercise-button-88">Add new weight</button>
+
+              <input type="text" id="input-reps-89" placeholder="reps" />
+              <ul id="workout-list-89"></ul>
+              <button id="add-exercise-button-89">Add new rep count</button>
+
+              <input type="text" id="input-sets-90" placeholder="sets" />
+              <ul id="workout-list-90"></ul>
+              <button id="add-exercise-button-90">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Deadlifts</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Deadlifts Details</summary>
+            <p>
+              Description: Deadlifts are a compound exercise targeting the
+              hamstrings, glutes, lower back, and grip strength, promoting
+              overall posterior chain development.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-91" placeholder="weight" />
+              <ul id="workout-list-91"></ul>
+              <button id="add-exercise-button-91">Add new weight</button>
+
+              <input type="text" id="input-reps-92" placeholder="reps" />
+              <ul id="workout-list-92"></ul>
+              <button id="add-exercise-button-92">Add new rep count</button>
+
+              <input type="text" id="input-sets-93" placeholder="sets" />
+              <ul id="workout-list-93"></ul>
+              <button id="add-exercise-button-93">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Bulgarian Split Squats</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Bulgarian Split Squats Details</summary>
+            <p>
+              Description: Bulgarian split squats are a unilateral exercise
+              targeting the quadriceps, hamstrings, and glutes, helping to
+              improve balance and coordination while also addressing muscle
+              imbalances.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-94" placeholder="weight" />
+              <ul id="workout-list-94"></ul>
+              <button id="add-exercise-button-94">Add new weight</button>
+
+              <input type="text" id="input-reps-95" placeholder="reps" />
+              <ul id="workout-list-95"></ul>
+              <button id="add-exercise-button-95">Add new rep count</button>
+
+              <input type="text" id="input-sets-96" placeholder="sets" />
+              <ul id="workout-list-96"></ul>
+              <button id="add-exercise-button-96">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Lunges</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Lunges Details</summary>
+            <p>
+              Description: Lunges are a unilateral exercise targeting the
+              quadriceps, hamstrings, and glutes, helping to improve balance,
+              stability, and lower body strength.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-97" placeholder="weight" />
+              <ul id="workout-list-97"></ul>
+              <button id="add-exercise-button-97">Add new weight</button>
+
+              <input type="text" id="input-reps-98" placeholder="reps" />
+              <ul id="workout-list-98"></ul>
+              <button id="add-exercise-button-98">Add new rep count</button>
+
+              <input type="text" id="input-sets-99" placeholder="sets" />
+              <ul id="workout-list-99"></ul>
+              <button id="add-exercise-button-99">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Romanian Deadlifts</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Romanian Deadlifts Details</summary>
+            <p>
+              Description: Romanian deadlifts target the hamstrings, glutes, and
+              lower back, helping to improve posterior chain strength and hip
+              hinge movement.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-100" placeholder="weight" />
+              <ul id="workout-list-100"></ul>
+              <button id="add-exercise-button-100">Add new weight</button>
+
+              <input type="text" id="input-reps-101" placeholder="reps" />
+              <ul id="workout-list-101"></ul>
+              <button id="add-exercise-button-101">Add new rep count</button>
+
+              <input type="text" id="input-sets-102" placeholder="sets" />
+              <ul id="workout-list-102"></ul>
+              <button id="add-exercise-button-102">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Box Jumps</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Box Jumps Details</summary>
+            <p>
+              Description: Box jumps are plyometric exercises that target
+              explosive power in the legs, improving vertical jump height and
+              overall lower body athleticism.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-103" placeholder="weight" />
+              <ul id="workout-list-103"></ul>
+              <button id="add-exercise-button-103">Add new weight</button>
+
+              <input type="text" id="input-reps-104" placeholder="reps" />
+              <ul id="workout-list-104"></ul>
+              <button id="add-exercise-button-104">Add new rep count</button>
+
+              <input type="text" id="input-sets-105" placeholder="sets" />
+              <ul id="workout-list-105"></ul>
+              <button id="add-exercise-button-105">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
+
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Standing Calf Raises</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Standing Calf Raises Details</summary>
+            <p>
+              Description: Standing calf raises target the calf muscles
+              (gastrocnemius and soleus), helping to develop strength and size
+              in the lower leg while also improving ankle stability.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-106" placeholder="weight" />
+              <ul id="workout-list-106"></ul>
+              <button id="add-exercise-button-106">Add new weight</button>
+
+              <input type="text" id="input-reps-107" placeholder="reps" />
+              <ul id="workout-list-107"></ul>
+              <button id="add-exercise-button-107">Add new rep count</button>
+
+              <input type="text" id="input-sets-108" placeholder="sets" />
+              <ul id="workout-list-108"></ul>
+              <button id="add-exercise-button-108">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
+        <!-- start of details-->
+        <li class="exercise">
+          <h2>Walking Lunges</h2>
+          <article class="exercise-details" style="display: none">
+            <summary>Walking Lunges Details</summary>
+            <p>
+              Description: Walking lunges are a dynamic lower body exercise that
+              targets the quadriceps, hamstrings, glutes, and calves while also
+              engaging the core for stability and balance.
+            </p>
+
+            <p id="exercise-description"></p>
+
+            <time class="exercise-timer">01:30</time>
+            <!-- Display the timer here -->
+            <button class="start-timer-btn" data-duration="90">
+              Start Timer
+            </button>
+            <!-- Set initial duration here -->
+
+            <aside class="container">
+              <input type="text" id="input-weight-109" placeholder="weight" />
+              <ul id="workout-list-109"></ul>
+              <button id="add-exercise-button-109">Add new weight</button>
+
+              <input type="text" id="input-reps-110" placeholder="reps" />
+              <ul id="workout-list-110"></ul>
+              <button id="add-exercise-button-110">Add new rep count</button>
+
+              <input type="text" id="input-sets-111" placeholder="sets" />
+              <ul id="workout-list-111"></ul>
+              <button id="add-exercise-button-111">Add new set count</button>
+            </aside>
+
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/rvHI6ZG4Jc4"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </li>
+        <!-- end of details-->
       </ul>
     </div>
 
@@ -304,22 +1645,6 @@
     <script src="js.js" type="module"></script>
     <script src="index3.js" type="module"></script>
     <script src="timer.js" type="module"></script>
-    <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker
-            .register("/sw.js")
-            .then((registration) => {
-              console.log(
-                "Service Worker registered with scope:",
-                registration.scope
-              );
-            })
-            .catch((error) => {
-              console.error("Service Worker registration failed:", error);
-            });
-        });
-      }
-    </script>
+    <script src="menu2.js" type="module"></script>
   </body>
 </html>

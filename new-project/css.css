@@ -4,8 +4,11 @@ body {
 }
 
 .program-list {
-  margin-bottom: 20px;
   width: 100%;
+  text-align: center; /* Center the content horizontally */
+}
+.program-list h2 {
+  margin-left: 0; /* Reset the left margin */
 }
 
 .program-list ul {
@@ -17,12 +20,11 @@ body {
 .program-list li {
   cursor: pointer;
   margin-bottom: 10px;
-  background-color: #ff4400;
+  background-color: #d85739;
   color: #fff;
   padding: 10px;
   border-radius: 5px;
   margin: 20px;
-
   transition: background-color 0.3s ease;
   width: 100%;
 }
@@ -49,13 +51,21 @@ body {
   justify-content: space-between;
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin-right: 2%;
 }
 
 .exercise {
   flex: 0 0 calc(33.33% - 20px); /* Subtract 20px from each column */
   margin-bottom: 20px;
-  background-color: #007bff;
+  background-color: #b77461;
+  text-align: center; /* Center the content horizontally */
+}
+
+.exercise h2 {
+  margin: auto; /* Top margin increased to 30px */
+  /* Your additional styles for the h2 element */
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 .exercise.expanded {
@@ -79,7 +89,7 @@ body {
 
 /* Style for exercise details */
 .exercise-details {
-  background-color: #f29191; /* Set background color */
+  background-color: #9b827c; /* Set background color */
   padding: 10px; /* Adjusted padding */
   border-radius: 8px; /* Add rounded corners */
   margin: 10px;
@@ -88,13 +98,13 @@ body {
   box-sizing: border-box; /* Include padding in the width calculation */
 }
 
-.exercise-details h3 {
+.exercise-details h4 {
   margin-bottom: 10px;
-  color: #007bff;
+  color: black;
 }
 .exercise-details p {
   margin-bottom: 10px;
-  color: #007bff;
+  color: black;
 }
 .exerciseImg {
   max-width: 300px;
@@ -123,68 +133,41 @@ body {
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Equal width columns */
-  gap: 10px; /* Spacing between grid items */
+  gap: 0%; /* Spacing between grid items */
   padding: 10px; /* Padding inside the container */
 }
 
 .container input[type="text"],
 .container button {
+  grid-column: span 2; /* Make input and button span two columns */
   width: 100%; /* Inputs and buttons take up full width */
   padding: 8px; /* Padding inside inputs and buttons */
   border: 1px solid #ccc; /* Border around inputs and buttons */
   border-radius: 5px; /* Rounded corners */
   box-sizing: border-box; /* Include padding and border in width calculation */
+  margin-bottom: 10px; /* Add spacing between input fields */
 }
 
 .container button {
-  background-color: #007bff; /* Button background color */
+  background-color: #d85739; /* Button background color */
   color: #fff; /* Text color */
   cursor: pointer; /* Show pointer on hover */
   transition: background-color 0.3s; /* Smooth transition */
 }
 
 .container button:hover {
-  background-color: #0056b3; /* Darker background color on hover */
-}
-
-/* Adjust grid layout for smaller element in the middle */
-.container input[type="text"],
-.container button {
-  grid-column: span 2; /* Make input and button span two columns */
+  background-color: #912710; /* Darker background color on hover */
 }
 
 .container ul {
-  max-height: 30px; /* Set maximum height for the list */
-}
-
-@media (min-width: 769px) {
-  #exercise-video {
-    width: 10%; /* Ensure the video fills its container horizontally */
-    max-width: 50%; /* Ensure the video doesn't exceed its container's width */
-    height: calc(
-      50vw * 9 / 16
-    ); /* Set the height based on 50% of the viewport width to maintain a 16:9 aspect ratio */
-    margin-bottom: 10px; /* Add bottom margin for spacing */
-    position: relative; /* Ensure proper positioning */
-  }
-  /* Style for input fields */
-  input[type="text"] {
-    width: 80%; /* Make input fields full-width */
-    padding: 10px; /* Add padding */
-    margin-bottom: 10px; /* Add spacing between input fields */
-    border: 1px solid #ccc; /* Add border */
-    border-radius: 5px; /* Add rounded corners */
-    box-sizing: border-box; /* Include padding and border in width calculation */
-    display: flex;
-    flex-direction: column;
-  }
+  margin: 28px;
 }
 
 /* Style for input fields */
 input[type="text"] {
   width: 50%; /* Make input fields full-width */
   padding: 10px; /* Add padding */
-  margin-bottom: 10px; /* Add spacing between input fields */
+  margin-top: 18px; /* Add spacing between input fields */
   border: 1px solid #ccc; /* Add border */
   border-radius: 5px; /* Add rounded corners */
   box-sizing: border-box; /* Include padding and border in width calculation */
@@ -198,27 +181,19 @@ input[type="text"] {
 }
 
 /* Style for button */
-#start-timer-btn {
-  background-color: red; /* Set background color */
-  color: #fff; /* Set text color */
-  border: none; /* Remove border */
+.start-timer-btn {
+  color: #ffefef; /* Set text color */
+  background-color: #d85739;
+  border: 1px solid #ccc; /* Add border */
   border-radius: 5px; /* Add rounded corners */
-  padding: 10px 20px; /* Add padding */
+  padding: 10px;
+  margin: 5px;
   cursor: pointer; /* Add cursor pointer on hover */
   transition: background-color 0.3s ease; /* Add smooth transition */
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
-#start-timer-btn:hover {
-  background-color: #0056b3; /* Change background color on hover */
 }
 
 /* Mobile styles */
 @media (max-width: 768px) {
-  .program-list {
-  }
-
   .program-list ul {
     list-style-type: none;
     display: flex;
@@ -226,21 +201,22 @@ input[type="text"] {
 
   .program-list li {
     cursor: pointer;
-    background-color: #007bff;
+    background-color: #d85739;
     width: 50%;
     height: auto;
     transition: background-color 0.3s ease;
     margin: 7px;
+    border-radius: 200px; /* Add rounded corners to the images */
+    transition: border-radius 0.9s;
   }
 
   .program-list li:hover {
-    background-color: #0056b3;
+    background-color: #9b2900;
   }
 
   .program-list li img {
     width: 100%; /* Adjust the width of the images */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Add rounded corners to the images */
   }
 }
 

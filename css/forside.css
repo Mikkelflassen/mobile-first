@@ -1,175 +1,173 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: 'Arial', sans-serif;
-    overflow-x: hidden;
-    background-color: #8b8b8b;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Arial", sans-serif;
+  overflow-x: hidden;
+  background-color: #8b8b8b;
 }
 
-header {
-    width: 100%;
-    height: 100vh; /* Use viewport height for full-screen height */
-    position: relative;
+main {
+  width: 100%;
+  height: 100vh; /* Use viewport height for full-screen height */
+  position: relative;
 }
 
-
-
-header .hero-image {
-    width: 100%;
-    height: 100%;
-    background: url('path-to-your-hero-image.jpg') no-repeat center center;
-    background-size: cover;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+main nav.menu-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4; /* higher than other elements */
 }
 
-header .hero-image img {
-    max-width: 100%;
-    height: auto;
-    display: block; /* adjust as needed, depending on your image */
+main .menu-toggle {
+  padding: 15px;
+  cursor: pointer;
+  z-index: 5;
 }
 
+main .menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #fff;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 1px;
+  transition: all 0.3s linear;
+}
+
+main .menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: fixed; /* or fixed width */
+  background-color: #333;
+  text-align: left;
+  padding: 15px;
+}
+
+main .menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+main .menu a:hover {
+  background-color: #575757;
+}
+
+main .hero-image {
+  width: 100%;
+  height: 100%;
+  background: url("path-to-your-hero-image.jpg") no-repeat center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main .hero-image img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* adjust as needed, depending on your image */
+}
 
 .logo {
-    position: absolute;
-    padding-top: 80px;
-    max-width: 60%; /* Adjust as needed */
-    height: auto;
-    z-index: 3; /* Ensure the logo is on top */
+  position: absolute;
+  padding-top: 80px;
+  max-width: 60%; /* Adjust as needed */
+  height: auto;
+  z-index: 3; /* Ensure the logo is on top */
 }
-
-
-
-.menu-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 4; /* higher than other elements */
-}
-
-.menu-toggle {
-    padding: 15px;
-    cursor: pointer;
-    z-index: 5;
-}
-
-.menu-toggle span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin-bottom: 5px;
-    position: relative;
-    background: #fff;
-    border-radius: 3px;
-    z-index: 1;
-    transform-origin: 1px;
-    transition: all 0.3s linear;
-}
-
-.menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 45px;
-    left: 0;
-    width: fixed; /* or fixed width */
-    background-color: #333;
-    text-align: left;
-    padding: 15px;
-}
-
-.menu a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-}
-
-.menu a:hover {
-    background-color: #575757;
-}
-
 
 .article {
-    transform: translateY(20px); /* Pushed down a bit */
-    transition: opacity 1s ease, transform 1s ease; /* Smooth transitions */
-    background-color: #f2f2f2; /* Light background for the article */
-    color: #333; /* Dark text for readability */
-    padding: 20px; /* Padding around the content */
-    margin-top: 20px; /* Space after the hero image */
-    background-color: #E6DFDE;
+  transform: translateY(20px); /* Pushed down a bit */
+  transition: opacity 1s ease, transform 1s ease; /* Smooth transitions */
+  background-color: #f2f2f2; /* Light background for the article */
+  color: #333; /* Dark text for readability */
+  padding: 20px; /* Padding around the content */
+  margin-top: 20px; /* Space after the hero image */
+  background-color: #e6dfde;
 }
 
-.article h2, .article, .article p {
-    margin: 0 0 20px; /* Spacing between paragraphs */
+.article h2,
+.article,
+.article p {
+  margin: 0 0 20px; /* Spacing between paragraphs */
 }
 
-p{ 
-    font-family: "Arapey", serif;
-    font-size: 20px;
-    line-height: 1.6;
+p {
+  font-family: "Arapey", serif;
+  font-size: 20px;
+  line-height: 1.6;
 }
 
-h1{
-    font-size: 30px;
-    text-align: center;
-    font-family: "Arvo", serif;
-    font-weight: 400;
+h1 {
+  font-size: 30px;
+  text-align: center;
+  font-family: "Arvo", serif;
+  font-weight: 400;
 }
 
-h2{
-    font-family: "Arvo", serif;
-    padding-bottom: 5%;
-    text-align: center;
-    font-weight: 400;
+h2 {
+  font-family: "Arvo", serif;
+  padding-bottom: 5%;
+  text-align: center;
+  font-weight: 400;
 }
 
 hr {
-    border: 0; /* Remove default border */
-    height: 1px; /* Set the height of the HR line */
-    background: #c36b54; /* This sets the color of the HR line */
-    width: 60%;
-    margin: 20px auto;
+  border: 0; /* Remove default border */
+  height: 1px; /* Set the height of the HR line */
+  background: #c36b54; /* This sets the color of the HR line */
+  width: 60%;
+  margin: 20px auto;
 }
 
-
 .article .read-more {
-    color: #c36b54; /* Red color for the 'Read more' link */
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 15px;
+  color: #c36b54; /* Red color for the 'Read more' link */
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 15px;
 }
 
 /* CSS for when the article should become visible */
 .article-visible {
-    opacity: 1;
-    transform: translateY(0px);
+  opacity: 1;
+  transform: translateY(0px);
 }
+
 .circle {
-    display: flex; /* Enables flexbox */
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    width: 200px; /* Width of the circle */
-    height: 200px; /* Height of the circle, same as width to make it round */
-    border-radius: 50%; /* Makes the div circular */
-    background: rgba(255, 99, 71, 0.79); /* Semi-transparent background color */
-    position: absolute; /* Position it over the text */
-    top: 80%; /* Adjust top position to where you want the circle to be */
-    left: 80%; /* Center the circle horizontally */
-    transform: translate(-50%, -50%); /* Offset the circle by half its size to truly center it */
-    z-index: 1; /* Ensure it's above the text */
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  width: 200px; /* Width of the circle */
+  height: 200px; /* Height of the circle, same as width to make it round */
+  border-radius: 50%; /* Makes the div circular */
+  background: rgba(255, 99, 71, 0.79); /* Semi-transparent background color */
+  position: absolute; /* Position it over the text */
+  top: 80%; /* Adjust top position to where you want the circle to be */
+  left: 80%; /* Center the circle horizontally */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Offset the circle by half its size to truly center it */
+  z-index: 1; /* Ensure it's above the text */
 }
 
 .circle-text {
-    color: #FFFFFF; /* Text color */
-    /* Adjust font size and other text styles as needed */
-    margin: 0; /* Remove default margin from h3 */
+  color: #ffffff; /* Text color */
+  /* Adjust font size and other text styles as needed */
+  margin: 0; /* Remove default margin from h3 */
 }
-
-

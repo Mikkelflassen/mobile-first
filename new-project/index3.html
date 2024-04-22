@@ -7,31 +7,9 @@
     />
     <title>App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/assets/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/assets/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
+
     <link rel="stylesheet" href="css.css" />
+    <link rel="stylesheet" href="menu.css" />
 
     <style>
       /* Additional CSS styles */
@@ -42,6 +20,25 @@
     </style>
   </head>
   <body>
+    <main>
+      <nav class="menu-container">
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="menu" id="menu">
+          <a href="#1">Forside</a>
+          <a href="#2">Inspiration</a>
+          <a href="new-project/index3.html">Træningsplaner</a>
+          <a href="#4">Vægt Træning</a>
+          <a href="#5">Kondition</a>
+          <a href="#6">Kost og Ernæring</a>
+          <a href="#7">Om Os</a>
+        </nav>
+      </nav>
+    </main>
+
     <div class="program-list">
       <h2>Valg program</h2>
       <ul>
@@ -63,11 +60,7 @@
       <ul>
         <!-- start of details-->
         <li class="exercise">
-          <img
-            class="exerciseImg"
-            src="assets/muscles-worked-push-day.webp"
-            alt="Push Day"
-          />
+          <h2>Bench Press</h2>
           <div class="exercise-details" style="display: none">
             <h4>Bench Press Details</h4>
             <p>Description: bench press is a good exercise</p>
@@ -108,11 +101,7 @@
 
         <!-- start of details-->
         <li class="exercise">
-          <img
-            class="exerciseImg"
-            src="assets/muscles-worked-push-day.webp"
-            alt="Push Day"
-          />
+          <h2>Dips</h2>
           <div class="exercise-details" style="display: none">
             <h4>Dips Details</h4>
             <p>Description: Dips is a good exercise</p>
@@ -145,11 +134,7 @@
         <!-- end of details-->
         <!-- start of details-->
         <li class="exercise">
-          <img
-            class="exerciseImg"
-            src="assets/muscles-worked-push-day.webp"
-            alt="Push Day"
-          />
+          <h2>Dumbbell Shoulder Press</h2>
           <div class="exercise-details" style="display: none">
             <h4>Dumbbell Shoulder Press Details</h4>
             <p>Description: Dumbbell Shoulder Press is a good exercise</p>
@@ -190,11 +175,7 @@
         <!-- end of details-->
         <!-- start of details-->
         <li class="exercise">
-          <img
-            class="exerciseImg"
-            src="assets/muscles-worked-push-day.webp"
-            alt="Push Day"
-          />
+          <h2>flyes</h2>
           <div class="exercise-details" style="display: none">
             <h4>Bench Press Details</h4>
             <p>Description: bench press is a good exercise</p>
@@ -331,22 +312,6 @@
     <script src="js.js" type="module"></script>
     <script src="index3.js" type="module"></script>
     <script src="timer.js" type="module"></script>
-    <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker
-            .register("/sw.js")
-            .then((registration) => {
-              console.log(
-                "Service Worker registered with scope:",
-                registration.scope
-              );
-            })
-            .catch((error) => {
-              console.error("Service Worker registration failed:", error);
-            });
-        });
-      }
-    </script>
+    <script src="menu2.js" type="module"></script>
   </body>
 </html>

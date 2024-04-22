@@ -233,7 +233,7 @@ function handleUpdateWorkoutList(workoutListInDB, workoutListEl) {
         appendExerciseToWorkoutListEl(exercise, workoutListEl, workoutListInDB);
       });
     } else {
-      workoutListEl.innerHTML = "No exercises here... yet";
+      workoutListEl.innerHTML = "Nothing here... yet";
     }
   });
 }

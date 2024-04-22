@@ -1,34 +1,78 @@
-body,
-html {
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
-  font-family: "Arial", sans-serif;
-  overflow-x: hidden;
-  background-color: #8b8b8b;
 }
 
-main {
+nav {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative; /* Add position relative */
+  z-index: 2; /* Ensure the navigation bar is above other elements */
+}
+.menu1 {
+  top: 0;
+  right: 0;
+  z-index: 4; /* higher than other elements */
+}
+
+.menu1 a {
+  color: #d82d2d;
+  text-decoration: none;
+  margin-right: 20px;
+  z-index: 4; /* higher than other elements */
+}
+
+.logo1 {
+  height: 10px; /* Adjust height as needed */
+  width: auto;
+}
+
+header .hero-image {
   width: 100%;
-  height: 100vh; /* Use viewport height for full-screen height */
+  height: 100vh;
+  background: url("path-to-your-hero-image.jpg") no-repeat center center;
+  background-size: cover;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 0; /* Ensure the hero image is behind the navigation bar */
 }
 
-main nav.menu-container {
+header .hero-image img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* adjust as needed, depending on your image */
+}
+
+.logo {
+  position: absolute;
+  padding-top: 80px;
+  width: 80%; /* Adjust as needed */
+  height: auto;
+  z-index: 3; /* Ensure the logo is on top */
+}
+
+.menu-container {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 4; /* higher than other elements */
 }
 
-main .menu-toggle {
+.menu-toggle {
   padding: 15px;
   cursor: pointer;
   z-index: 5;
 }
 
-main .menu-toggle span {
+.menu-toggle span {
   display: block;
   width: 25px;
   height: 3px;
@@ -41,7 +85,7 @@ main .menu-toggle span {
   transition: all 0.3s linear;
 }
 
-main .menu {
+.menu {
   display: none;
   flex-direction: column;
   position: absolute;
@@ -53,41 +97,15 @@ main .menu {
   padding: 15px;
 }
 
-main .menu a {
+.menu a {
   color: #fff;
   text-decoration: none;
   padding: 10px 15px;
   display: block;
 }
 
-main .menu a:hover {
+.menu a:hover {
   background-color: #575757;
-}
-
-main .hero-image {
-  width: 100%;
-  height: 100%;
-  background: url("path-to-your-hero-image.jpg") no-repeat center center;
-  background-size: cover;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-main .hero-image img {
-  max-width: 100%;
-  height: auto;
-  display: block; /* adjust as needed, depending on your image */
-}
-
-.logo {
-  position: absolute;
-  padding-top: 80px;
-  max-width: 60%; /* Adjust as needed */
-  height: auto;
-  z-index: 3; /* Ensure the logo is on top */
 }
 
 .article {
@@ -147,7 +165,6 @@ hr {
   opacity: 1;
   transform: translateY(0px);
 }
-
 .circle {
   display: flex; /* Enables flexbox */
   justify-content: center; /* Centers content horizontally */
@@ -164,7 +181,6 @@ hr {
     -50%
   ); /* Offset the circle by half its size to truly center it */
   z-index: 1; /* Ensure it's above the text */
-  text-decoration: none;
 }
 
 .circle-text {

@@ -92,9 +92,9 @@ body {
   background-color: #9b827c; /* Set background color */
   padding: 10px; /* Adjusted padding */
   border-radius: 8px; /* Add rounded corners */
-  margin: 10px;
+  margin: 2%;
   width: auto; /* Set width to auto */
-  max-width: 98%; /* Ensure it doesn't exceed the parent's width */
+  max-width: 96%; /* Ensure it doesn't exceed the parent's width */
   box-sizing: border-box; /* Include padding in the width calculation */
 }
 
@@ -226,16 +226,16 @@ input[type="text"] {
     background-color: #9d6e6e;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: red;
+    background-color: #b77461;
   }
 
   .exercise-list ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    grid-gap: 20px; /* Spacing between grid items */
+    grid-gap: 4%; /* Spacing between grid items */
     list-style-type: none;
+    margin-right: 4%;
   }
 
   .exercise.expanded {
@@ -271,19 +271,6 @@ input[type="text"] {
   /* Style for placeholder text */
   ::placeholder {
     color: #999; /* Change placeholder text color */
-  }
-
-  /* Style for button */
-  #start-timer-btn {
-    background-color: #007bff; /* Set background color */
-    color: #fff; /* Set text color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Add rounded corners */
-    padding: 10px 20px; /* Add padding */
-    cursor: pointer; /* Add cursor pointer on hover */
-    transition: background-color 0.3s ease; /* Add smooth transition */
-    margin-bottom: 10px;
-    margin-top: 10px;
   }
 
   #start-timer-btn:hover {

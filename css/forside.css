@@ -164,6 +164,7 @@ hr {
     -50%
   ); /* Offset the circle by half its size to truly center it */
   z-index: 1; /* Ensure it's above the text */
+  text-decoration: none;
 }
 
 .circle-text {

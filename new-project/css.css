@@ -159,7 +159,7 @@ body {
 
 @media (min-width: 769px) {
   #exercise-video {
-    width: 100%; /* Ensure the video fills its container horizontally */
+    width: 10%; /* Ensure the video fills its container horizontally */
     max-width: 50%; /* Ensure the video doesn't exceed its container's width */
     height: calc(
       50vw * 9 / 16
@@ -199,7 +199,7 @@ input[type="text"] {
 
 /* Style for button */
 #start-timer-btn {
-  background-color: #007bff; /* Set background color */
+  background-color: red; /* Set background color */
   color: #fff; /* Set text color */
   border: none; /* Remove border */
   border-radius: 5px; /* Add rounded corners */
@@ -246,13 +246,6 @@ input[type="text"] {
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-  #exercises-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px; /* Add padding to the container */
-  }
-
   .exercise {
     background-color: #9d6e6e;
     border-radius: 8px;
@@ -260,6 +253,17 @@ input[type="text"] {
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: red;
+  }
+
+  .exercise-list ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-gap: 20px; /* Spacing between grid items */
+    list-style-type: none;
+  }
+
+  .exercise.expanded {
+    grid-column: span 2; /* Expand the exercise to fill 2 columns */
   }
 
   .exercise:hover {

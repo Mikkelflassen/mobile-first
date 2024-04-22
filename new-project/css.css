@@ -1,6 +1,5 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #b1b1b1;
 }
 
 .program-list {
@@ -8,7 +7,7 @@ body {
   text-align: center; /* Center the content horizontally */
 }
 .program-list h2 {
-  margin-left: 0; /* Reset the left margin */
+  margin-bottom: -20px;
 }
 
 .program-list ul {
@@ -44,14 +43,19 @@ body {
 .exercise-list {
   width: 100%;
   padding: 10px; /* Remove default left padding */
+  margin-top: -40px;
 }
+.exercise-list h3 {
+  text-align: center;
+}
+
 .exercise-list ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   list-style-type: none;
   padding: 0;
-  margin-right: 2%;
+  margin-right: 1.5%;
 }
 
 .exercise {

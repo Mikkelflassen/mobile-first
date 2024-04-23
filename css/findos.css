@@ -139,6 +139,11 @@ nav {
   display: flex;
   gap: 10px; /* Add space between icons */
 }
+.social-media a i {
+  font-size: 35px; /* Increase the size of the icons */
+  filter: invert(45%) sepia(95%) saturate(3199%) hue-rotate(335deg)
+    brightness(96%) contrast(88%); /* Adjust filter values as needed */
+}
 
 footer {
   display: flex;
@@ -155,8 +160,7 @@ footer {
 footer p {
   flex-grow: 1; /* Allow the <p> element to grow and fill the available space */
   text-align: center; /* Center the text horizontally */
-  margin-right: 7.5%;
-  font-family: "Arvo";
+  margin-right: 13%;
 }
 
 @media (max-width: 1200px) {

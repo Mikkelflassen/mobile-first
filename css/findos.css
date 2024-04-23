@@ -10,7 +10,7 @@ body {
 }
 
 nav {
-  background-color: #d85739;
+  background-color: #c36b54;
   color: #fff;
   display: flex;
   align-items: center;
@@ -20,9 +20,12 @@ nav {
 }
 
 .menu1 {
+  width: 100%;
   top: 0;
   right: 0; /* Adjusted to start from the left */
   z-index: 4; /* higher than other elements */
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly with space between */
 }
 
 .menu1 a {
@@ -152,7 +155,8 @@ footer {
 footer p {
   flex-grow: 1; /* Allow the <p> element to grow and fill the available space */
   text-align: center; /* Center the text horizontally */
-  margin-right: 10%;
+  margin-right: 7.5%;
+  font-family: "Arvo";
 }
 
 @media (max-width: 1200px) {

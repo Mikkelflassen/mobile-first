@@ -212,7 +212,7 @@ input[type="text"] {
     transition: background-color 0.3s ease;
     margin: 7px;
     border-radius: 200px; /* Add rounded corners to the images */
-    transition: border-radius 0.9s;
+    transition: border-radius 3s;
   }
 
   .program-list li:hover {

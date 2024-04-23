@@ -1,18 +1,94 @@
 /* FØLGENDE SEKTION, script til headeren*/
 .header {
-  background-color: #c36b54;
-  font-family: "Arvo";
-  width: 100%;
-  height: 80px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
   display: flex;
+
   align-items: center;
-  padding: 0 2%; /* Juster padding */
-  box-sizing: border-box;
-  justify-content: space-between;
-  position: fixed; /* Fixed position, så Headeren bliver selvom man scroller */
-  top: 0; /* Udfylder baggrundsfarve, i toppen */
-  left: 0; /* Udfylder baggrundsfarve til venstre */
-  z-index: 1000; /* Ensure the header appears above other content */
+  padding: 5px 20px;
+  position: relative; /* Add position relative */
+  z-index: 2; /* Ensure the navigation bar is above other elements */
+}
+
+.menu1 {
+  top: 0;
+  right: 0; /* Adjusted to start from the left */
+  z-index: 4; /* higher than other elements */
+}
+
+.menu1 a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 15px;
+  font-size: 17px;
+  background-color: #575757;
+  border-radius: 20px;
+}
+
+.logo1 img {
+  height: 50px; /* Adjust height as needed */
+  width: auto;
+}
+
+.menu-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4; /* higher than other elements */
+  display: none;
+}
+
+.menu-toggle {
+  padding: 15px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #fff;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 1px;
+  transition: all 0.3s linear;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: fixed; /* or fixed width */
+  background-color: #333;
+  text-align: left;
+  padding: 15px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+.menu a:hover {
+  background-color: #575757;
 }
 
 #logo {

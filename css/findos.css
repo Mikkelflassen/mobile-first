@@ -6,10 +6,11 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: rgba(155, 130, 124, 0.25); /* Adjust the opacity to 25% */
 }
 
 nav {
-  background-color: #333;
+  background-color: #d85739;
   color: #fff;
   display: flex;
   align-items: center;
@@ -31,7 +32,7 @@ nav {
   margin-right: 10px;
   padding: 15px;
   font-size: 17px;
-  background-color: #575757;
+  background-color: #c3391b;
   border-radius: 20px;
 }
 
@@ -90,175 +91,46 @@ nav {
   background-color: #575757;
 }
 
-#logo {
-  max-height: 85%; /* Ensure the logo does not exceed the height of the container */
-  max-width: 85%; /* Ensure the logo does not exceed the width of the container */
-  position: absolute; /* Position the element absolutely */
-  top: 2%; /* Align to the top of the header */
-  left: 1%; /* Align to the left of the header */
-  display: flex; /* Use flexbox to align items */
-}
-
-.align-right {
-  margin-right: 2%; /* Juster skriftens placering til højre */
-}
-.button {
-  background-color: red;
-  color: white;
-  padding: 20px;
-  border-radius: 30px; /* juster hjørnerne til rundinger */
-}
-.buttonn {
-  background-color: red;
-  color: white;
-  padding: 20px;
-  border-radius: 30px;
-}
-
-.logo-link {
-  text-decoration: none; /* Fjerner understregningen, så logo'et ikke ligner et link */
-  color: inherit; /* Undgå at farven ændrer sig når man trykker på logo'et */
-}
-
-/**
-   * file: css/css.css
-   * purpose: styling
-   **/
-
-/* Define variables in the :root */
-
-.containerr {
-  padding: 0%;
-}
-
-.slider-wrapper {
-  position: relative;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.slider {
+.fitnessCenter {
   display: flex;
-  aspect-ratio: 16/9;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-  border-radius: 0rem;
+}
+.fitnessCenter a {
+  display: grid;
+  margin: 20px;
 }
 
-.slider img {
-  flex: 1 0 100%;
-  scroll-snap-align: start;
-  object-fit: cover;
-}
-
-.slider-nav {
+.map-container {
+  width: 60%; /* Adjust the width as needed */
+  padding: 15px;
+  padding-bottom: -150px;
+  margin: 15px auto; /* Center the map horizontally */
+  background-color: #d94f2f;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
-  column-gap: 1rem;
-  position: absolute;
-  bottom: 1.25rem;
-  left: 50%;
-  transform: translatex(-50%);
-  z-index: 1;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  overflow: hidden; /* Hide overflow if the content is too large */
 }
 
-.slider-nav a {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background-color: #ffffff;
-  opacity: 0.75;
-  transition: opacity ease 250ms;
-}
+.map {
+  width: 100%; /* Adjust the width as needed */
+  padding: 15px;
+  padding-bottom: -150px;
+  margin: 15px auto; /* Center the map horizontally */
+  background-color: #d94f2f;
+  border-radius: 10px;
 
-.slider-nav a:hover {
-  opacity: 1;
-}
-
-.slider::-webkit-scrollbar {
-  display: none;
-}
-
-/*FØLGENDE SECTION! Definere events */
-.flexbox {
   display: flex;
-  justify-content: center; /* Adjust as needed */
-  align-items: flex-start; /* Adjust as needed */
-  flex-wrap: wrap;
-  margin: 20px 0;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  overflow: hidden; /* Hide overflow if the content is too large */
 }
 
-.container {
-  width: 480px;
-  height: 480px;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 0; /* Adjust as needed */
-  /*margin-left: 700px; */ /* Remove this line, as it may cause misalignment */
-}
-
-.box {
-  background-color: #c9e4f5;
-  font-family: "Comic Sans MS";
-  font-weight: bold;
-  font-weight: 600;
-  width: calc(50% - 10px); /* 50% bredde med noget mellemrum, procentmæssigt */
-  height: calc(
-    33.33% - 10px
-  ); /* 33.33% height with some spacing between boxes */
-  margin: 5px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-}
-
-/*Følgende sektion!! Script til footeren*/
-/* Reset default browser styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-}
-
-.footer {
-  background-color: #ffffff;
-  color: #000; /* Set text color to black */
-  padding: 40px 0;
-}
-
-.social-media-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.social-media-text,
-.footer-section h3,
-.footer-section p {
-  color: rgb(6, 147, 227); /* Same color as titles */
-  font-family: "Comic Sans MS"; /* Change font family */
-  font-weight: bold; /* Set bold font weight */
-}
-
-.social-media {
-  display: flex;
-  align-items: center;
-}
-
-.social-media a {
-  margin-right: 25px;
-}
-
-.social-media a img {
-  width: 30px; /* Adjust the size of the social media icons */
+.map iframe {
+  width: 90%; /* Make the iframe fill the container */
+  height: 400px;
+  margin-bottom: -120px;
 }
 
 footer {
@@ -266,107 +138,9 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px 0;
-
   position: fixed; /* Ensure the footer remains at the bottom of the viewport */
   bottom: 0; /* Align the bottom of the footer with the bottom of the viewport */
   width: 100%; /* Make the footer span the entire width */
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: f; /* Vertically align items to the top */
-  margin-left: 5px; /* Add margin to move content to the right */
-}
-
-.footer-section {
-  width: calc(30% - 10px); /* Adjust width to fit closer together with margin */
-  margin-right: 10px; /* Add margin between sections */
-}
-
-.footer-section:last-child {
-  margin-right: 0; /* Remove margin from last section */
-}
-
-.footer-section h3 {
-  margin-bottom: 10px;
-}
-
-.footer-section p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #000; /* Set text color to black */
-}
-
-.logo {
-  flex: 1; /* Flexible space */
-  text-align: right; /* Align logo to the right */
-  margin-right: 20px; /* Adjust margin to move the logo slightly to the left */
-}
-
-.logo img {
-  width: 80px; /* Adjust the width as needed */
-}
-
-.blue-square {
-  width: 100%;
-  background-color: #7bdcb5; /* Blue color */
-  padding: 40px 20px; /* Adjust padding to push text a bit to the left */
-  text-align: left;
-  color: #0693e3; /* White text color */
-  font-size: 40px;
-  line-height: 1.6;
-  font-family: "Comic Sans MS"; /* Change font family */
-  font-weight: bold; /* Set bold font weight */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.blue-square p {
-  margin-bottom: 20px;
-}
-
-.botton {
-  background-color: #0693e3;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-family: "Comic Sans MS";
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 20px; /* Make the edges of the button more round */
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: #0571c0;
-}
-
-.maps-header {
-  width: 100%;
-  background-color: #7bdcb5;
-  color: #0693e3;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-family: "Comic Sans MS";
-  font-size: 40px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.signup-button {
-  background-color: red;
-  color: white;
-  border: 0;
-  border-radius: 20px;
-  padding: 8px 12px;
-  margin-top: 20px;
-}
-
-.signup-date {
-  font-weight: normal;
-  font-size: 12px;
 }
 
 @media (max-width: 1194px) {

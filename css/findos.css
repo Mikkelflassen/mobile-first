@@ -143,7 +143,7 @@ footer {
   width: 100%; /* Make the footer span the entire width */
 }
 
-@media (max-width: 1194px) {
+@media (max-width: 1200px) {
   body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -158,7 +158,7 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #333;
+    background-color: #d85739;
     z-index: 2; /* higher than other elements */
     display: block;
   }
@@ -203,5 +203,45 @@ footer {
 
   .menu a:hover {
     background-color: #575757;
+  }
+}
+
+@media (max-width: 794px) {
+  .fitnessCenter {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .fitnessCenter a {
+    margin: 20px 0; /* Add vertical margin */
+  }
+
+  .map-container {
+    width: 80%; /* Adjust the width as needed */
+    padding: 15px;
+    padding-bottom: 0;
+    margin: 15px auto; /* Center the map horizontally */
+    background-color: #d94f2f;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    overflow: hidden; /* Hide overflow if the content is too large */
+  }
+
+  .map {
+    width: 100%;
+    height: 500px;
+    padding: 0px;
+    background-color: #d94f2f;
+    border-radius: 10px;
+  }
+
+  .map iframe {
+    width: 90%;
+    height: 130%;
+    margin-bottom: 10px; /* Add some space between the map and the next element */
   }
 }

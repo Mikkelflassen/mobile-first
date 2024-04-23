@@ -12,7 +12,6 @@ nav {
   background-color: #333;
   color: #fff;
   display: flex;
-
   align-items: center;
   padding: 5px 20px;
   position: relative; /* Add position relative */

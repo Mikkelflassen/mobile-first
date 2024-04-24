@@ -134,6 +134,9 @@ nav {
   width: 90%; /* Make the iframe fill the container */
   height: 400px;
   margin-bottom: -120px;
+  position: relative;
+  top: -90px; 
+  border: none"
 }
 .social-media {
   display: flex;

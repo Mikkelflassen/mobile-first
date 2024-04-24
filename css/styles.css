@@ -10,17 +10,17 @@ nav {
   display: flex;
   align-items: center;
   padding: 5px 20px;
-  position: relative; /* Add position relative */
-  z-index: 2; /* Ensure the navigation bar is above other elements */
+  position: relative;
+  z-index: 2; /* Sørg for, at navigationslinjen er over andre elementer */
 }
 
 .menu1 {
   width: 100%;
   top: 0;
-  right: 0; /* Adjusted to start from the left */
-  z-index: 4; /* higher than other elements */
+  right: 0; /* Justeret til at starte fra højre */
+  z-index: 4; /* højere end andre elementer */
   display: flex;
-  justify-content: space-between; /* Distribute items evenly with space between */
+  justify-content: space-between; /* Fordel elementer jævnt med plads imellem */
 }
 
 .menu1 a {
@@ -35,7 +35,7 @@ nav {
 }
 
 .logo1 img {
-  height: 50px; /* Adjust height as needed */
+  height: 50px;
   width: auto;
 }
 
@@ -43,7 +43,7 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 4; /* higher than other elements */
+  z-index: 4; /* højere end andre elementer */
   display: none;
 }
 
@@ -72,7 +72,7 @@ nav {
   position: absolute;
   top: 45px;
   left: 0;
-  width: fixed; /* or fixed width */
+  width: fixed; /* fast bredde */
   background-color: #333;
   text-align: left;
   padding: 15px;
@@ -110,23 +110,22 @@ article {
   text-align: left;
   font-family: "Arvo", serif;
   font-weight: 400;
-
-  padding-bottom: 100px; /* Adjust the padding to create space at the bottom */
+  padding-bottom: 100px; /* padding for at skabe plads nederst */
 }
 
 .video-container {
   position: relative;
-  width: 100%; /* Ensure the video fills its container horizontally */
-  padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspektforhold (9 / 16 * 100) */
 }
 
 .video-container iframe {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* Ensure the video fills the container horizontally */
-  height: 88%; /* Ensure the video fills the container vertically */
-  border: 0; /* Remove border */
+  width: 100%;
+  height: 88%;
+  border: 0;
 }
 
 footer {
@@ -135,9 +134,9 @@ footer {
   text-align: center;
   padding: 10px 0;
 
-  position: fixed; /* Ensure the footer remains at the bottom of the viewport */
-  bottom: 0; /* Align the bottom of the footer with the bottom of the viewport */
-  width: 100%; /* Make the footer span the entire width */
+  position: fixed; /* footer forbliver nederst på visningen */
+  bottom: 0; /* Juster bunden af footer til bunden af visningen */
+  width: 100%; /* Gør footeren spanne hele bredden */
 }
 
 @media (max-width: 994px) {
@@ -149,29 +148,29 @@ footer {
   }
 
   .article-img img {
-    max-width: 100%; /* Adjust to fit the grid */
-    max-height: 400px; /* Maintain aspect ratio */
+    max-width: 100%; /* Juster til at passe til grid'en */
+    max-height: 400px; /* Oprethold aspektforhold */
     width: 100%;
     height: 100%;
   }
 
   .article-text {
-    padding-bottom: 20px; /* Adjust as needed for smaller screens */
+    padding-bottom: 20px; /* Juster efter behov for mindre skærme */
     text-align: left;
   }
   .video-container {
     position: relative;
-    width: 100%; /* Ensure the video fills its container horizontally */
-    padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+    width: 100%; /* Sørg for, at videoen udfylder sin beholder vandret */
+    padding-bottom: 56.25%; /* 16:9 aspektforhold (9 / 16 * 100) */
   }
 
   .video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Ensure the video fills the container horizontally */
-    height: 100%; /* Ensure the video fills the container vertically */
-    border: 0; /* Remove border */
+    width: 100%; /* Sørg for, at videoen udfylder beholderen vandret */
+    height: 100%; /* Sørg for, at videoen udfylder beholderen lodret */
+    border: 0; /* Fjern kanten */
   }
   footer {
     background-color: #333;
@@ -179,9 +178,9 @@ footer {
     text-align: center;
     padding: 10px 0;
 
-    position: relative; /* Ensure the footer remains at the bottom of the viewport */
-    bottom: 0; /* Align the bottom of the footer with the bottom of the viewport */
-    width: 100%; /* Make the footer span the entire width */
+    position: relative; /* Sørg for, at footer forbliver nederst på visningen */
+    bottom: 0; /* Juster bunden af footer til bunden af visningen */
+    width: 100%; /* Gør footeren spanne hele bredden */
   }
 }
 
@@ -201,7 +200,7 @@ footer {
     top: 0;
     left: 0;
     background-color: #333;
-    z-index: 2; /* higher than other elements */
+    z-index: 2; /* højere end andre elementer */
     display: block;
   }
 
@@ -230,7 +229,7 @@ footer {
     position: absolute;
     top: 45px;
     left: 0;
-    width: fixed; /* or fixed width */
+    width: fixed; /* fast bredde */
     background-color: #333;
     text-align: left;
     padding: 15px;

@@ -9,11 +9,11 @@ nav {
   background-color: #333;
   color: #fff;
   display: flex;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   align-items: center;
   padding: 10px 20px;
-  position: relative; 
-  z-index: 2; 
+  position: relative;
+  z-index: 2;
 }
 
 /* Navigations menu placering */
@@ -21,10 +21,10 @@ nav {
   position: absolute;
   width: 100%;
   top: 0;
-  left: 0; 
-  z-index: 4; 
+  left: 0;
+  z-index: 4;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .menu1 a {
@@ -48,29 +48,29 @@ header .hero-image {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  z-index: 0; 
+  z-index: 0;
 }
 /* placering af billede sørger for det er fuld størrelse */
 header .hero-image img {
   max-width: 100%;
   height: auto;
-  display: block; 
+  display: block;
 }
 
 /* logo størrelse og placering foran baggrund */
 .logo {
   position: absolute;
   padding-top: 80px;
-  width: 80%; 
+  width: 80%;
   height: auto;
-  z-index: 3; 
+  z-index: 3;
 }
 /* placering af nav*/
 .menu-container {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 4; 
+  z-index: 4;
   display: none;
 }
 
@@ -118,19 +118,19 @@ header .hero-image img {
 }
 /* artikel smooth transition og farver samt padding og margin for white space */
 .article {
-  transform: translateY(20px); 
-  transition: opacity 1s ease, transform 1s ease; 
-  background-color: #f2f2f2; 
-  color: #333; 
-  padding: 20px; 
-  margin-top: 20px; 
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 20px;
+  margin-top: 20px;
   background-color: #e6dfde;
 }
 /* white space for paragraferne */
 .article h2,
 .article,
 .article p {
-  margin: 0 0 20px; 
+  margin: 0 0 20px;
 }
 /* styling af brødtekst */
 p {
@@ -168,7 +168,7 @@ hr {
 }
 /* læs mere cirkle */
 .article .read-more {
-  color: #c36b54; 
+  color: #c36b54;
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
@@ -183,26 +183,23 @@ hr {
 
 /* cirkle placering og udsende*/
 .circle {
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  width: 150px; 
-  height: 150px; 
-  border-radius: 50%; 
-  background: rgba(255, 99, 71, 0.947); 
-  position: absolute; 
-  top: 80%; 
-  left: 82%; 
-  transform: translate(
-    -50%,
-    -50%
-  ); 
-  z-index: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(255, 99, 71, 0.947);
+  position: absolute;
+  top: 80%;
+  left: 82%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 /* cirkel text farve og fjerner margin*/
 .circle-text {
-  color: #ffffff; 
-  margin: 0; 
+  color: #ffffff;
+  margin: 0;
 }
 
 /* footer farve og design */
@@ -211,29 +208,29 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px 0;
-  position: relative; 
+  position: relative;
   width: 100%;
-  margin-top: auto; 
+  margin-top: auto;
 }
-/* footer responsive */
+
 @media (min-width: 1260px) {
   footer {
     text-align: center;
     padding: 10px 0;
-    position: relative; 
-    width: 100%; 
-    margin-top: 11%; 
+    position: relative;
+    width: 100%;
+    margin-top: 11%;
   }
 }
 
-/* responsiv body */
+/* Responsivitet for body */
 @media (max-width: 983px) {
   body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
   }
- /* footer responsive */
+  /* Responsivitet for navigationsmenuen */
   nav {
     background-color: #333;
     color: #fff;
@@ -241,15 +238,15 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    position: relative; /* Add position relative */
-    z-index: 2; /* Ensure the navigation bar is above other elements */
+    position: relative;
+    z-index: 2;
     display: none;
   }
 
   .menu1 {
     top: 0;
     right: 0;
-    z-index: 4; /* higher than other elements */
+    z-index: 4;
     display: none;
   }
 
@@ -257,12 +254,12 @@ footer {
     color: #d82d2d;
     text-decoration: none;
     margin-right: 20px;
-    z-index: 4; /* higher than other elements */
+    z-index: 4;
     display: none;
   }
 
   .logo1 {
-    height: 10px; /* Adjust height as needed */
+    height: 10px;
     width: auto;
     display: none;
   }
@@ -270,28 +267,28 @@ footer {
   header .hero-image {
     width: 100%;
     height: 100vh;
-    background: url("path-to-your-hero-image.jpg") no-repeat center center;
+    background: url("sti-til-dit-hero-billede.jpg") no-repeat center center;
     background-size: cover;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    z-index: 0; /* Ensure the hero image is behind the navigation bar */
+    z-index: 0;
   }
 
   header .hero-image img {
     max-width: 100%;
     height: auto;
-    display: block; /* adjust as needed, depending on your image */
+    display: block;
   }
 
   .logo {
     position: absolute;
     padding-top: 80px;
-    width: 80%; /* Adjust as needed */
+    width: 80%;
     height: auto;
-    z-index: 3; /* Ensure the logo is on top */
+    z-index: 3;
   }
 
   .menu-container {
@@ -299,7 +296,7 @@ footer {
     top: 0;
     left: 0;
     background-color: #333;
-    z-index: 2; /* higher than other elements */
+    z-index: 2;
     display: block;
   }
 
@@ -328,7 +325,7 @@ footer {
     position: absolute;
     top: 45px;
     left: 0;
-    width: fixed; /* or fixed width */
+    width: fixed; /* eller fast bredde */
     background-color: #333;
     text-align: left;
     padding: 15px;
@@ -346,19 +343,19 @@ footer {
   }
 
   .article {
-    transform: translateY(20px); /* Pushed down a bit */
-    transition: opacity 1s ease, transform 1s ease; /* Smooth transitions */
-    background-color: #f2f2f2; /* Light background for the article */
-    color: #333; /* Dark text for readability */
-    padding: 20px; /* Padding around the content */
-    margin-top: 20px; /* Space after the hero image */
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 20px;
+    margin-top: 20px;
     background-color: #e6dfde;
   }
 
   .article h2,
   .article,
   .article p {
-    margin: 0 0 20px; /* Spacing between paragraphs */
+    margin: 0 0 20px;
   }
 
   p {
@@ -382,52 +379,43 @@ footer {
   }
 
   hr {
-    border: 0; /* Remove default border */
-    height: 1px; /* Set the height of the HR line */
-    background: #c36b54; /* This sets the color of the HR line */
+    border: 0;
+    height: 1px;
+    background: #c36b54;
     width: 60%;
     margin: 20px auto;
   }
 
   .article .read-more {
-    color: #c36b54; /* Red color for the 'Read more' link */
+    color: #c36b54;
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
     margin-top: 15px;
   }
 
-  /* CSS for when the article should become visible */
+  /* CSS for når artiklen skal blive synlig */
   .article-visible {
     opacity: 1;
     transform: translateY(0px);
   }
   .circle {
-    display: flex; /* Enables flexbox */
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    width: 150px; /* Width of the circle */
-    height: 150px; /* Height of the circle, same as width to make it round */
-    border-radius: 50%; /* Makes the div circular */
-    background: rgba(
-      255,
-      99,
-      71,
-      0.897
-    ); /* Semi-transparent background color */
-    position: absolute; /* Position it over the text */
-    top: 80%; /* Adjust top position to where you want the circle to be */
-    left: 80%; /* Center the circle horizontally */
-    transform: translate(
-      -50%,
-      -50%
-    ); /* Offset the circle by half its size to truly center it */
-    z-index: 1; /* Ensure it's above the text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(255, 99, 71, 0.897);
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
   }
 
   .circle-text {
-    color: #ffffff; /* Text color */
-    /* Adjust font size and other text styles as needed */
-    margin: 0; /* Remove default margin from h3 */
+    color: #ffffff;
+    margin: 0;
   }
 }

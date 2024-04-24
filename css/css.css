@@ -1,11 +1,16 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: rgba(155, 130, 124, 0.25); /* Adjust the opacity to 25% */
+  background-color: rgba(
+    155,
+    130,
+    124,
+    0.25
+  ); /* Justér gennemsigtigheden til 25% */
 }
 
 .program-list {
   width: 100%;
-  text-align: center; /* Center the content horizontally */
+  text-align: center; /* Centrér indholdet horisontalt */
 }
 .program-list h2 {
   margin-bottom: -20px;
@@ -29,12 +34,12 @@ body {
   width: 100%;
 }
 
-/* Style for program images */
+/* Stil for programbilleder */
 .program-list li img {
-  width: 100%; /* Adjust the width of the images */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 10px; /* Add space between the image and text */
-  border-radius: 5px; /* Add rounded corners to the images */
+  width: 100%; /* Justér bredden af ​​billederne */
+  height: auto; /* Oprethold aspektforholdet */
+  margin-right: 10px; /* Tilføj plads mellem billedet og teksten */
+  border-radius: 5px; /* Tilføj afrundede hjørner til billederne */
 }
 
 .program-list li:hover {
@@ -43,7 +48,7 @@ body {
 
 .exercise-list {
   width: 100%;
-  padding: 10px; /* Remove default left padding */
+  padding: 10px; /* Fjern standard venstre polstring */
   margin-top: -40px;
 }
 .exercise-list h3 {
@@ -60,21 +65,21 @@ body {
 }
 
 .exercise {
-  flex: 0 0 calc(33.33% - 20px); /* Subtract 20px from each column */
+  flex: 0 0 calc(33.33% - 20px); /* Træk 20px fra hver kolonne */
   margin-bottom: 20px;
   background-color: #b77461;
-  text-align: center; /* Center the content horizontally */
+  text-align: center; /* Centrér indholdet horisontalt */
 }
 
 .exercise h2 {
-  margin: auto; /* Top margin increased to 30px */
-  /* Your additional styles for the h2 element */
+  margin: auto; /* Topmargin øget til 30px */
+  /* Dine yderligere stilarter for h2-elementet */
   margin-top: 10%;
   margin-bottom: 10%;
 }
 
 .exercise.expanded {
-  flex: 90%; /* Set width to 100% for the expanded exercise */
+  flex: 90%; /* Sæt bredden til 100% for den udvidede øvelse */
 }
 
 .exercise:hover {
@@ -92,15 +97,15 @@ body {
   color: #555;
 }
 
-/* Style for exercise details */
+/* Stil for øvelsesdetaljer */
 .exercise-details {
-  background-color: #9b827c; /* Set background color */
-  padding: 10px; /* Adjusted padding */
-  border-radius: 8px; /* Add rounded corners */
+  background-color: #9b827c; /* Sæt baggrundsfarven */
+  padding: 10px; /* Justeret polstring */
+  border-radius: 8px; /* Tilføj afrundede hjørner */
   margin: 2%;
-  width: auto; /* Set width to auto */
-  max-width: 96%; /* Ensure it doesn't exceed the parent's width */
-  box-sizing: border-box; /* Include padding in the width calculation */
+  width: auto; /* Sæt bredden til auto */
+  max-width: 96%; /* Sørg for, at det ikke overstiger forælderens bredde */
+  box-sizing: border-box; /* Inkluder polstring i bredden beregning */
 }
 
 .exercise-details h4 {
@@ -113,91 +118,91 @@ body {
 }
 .exerciseImg {
   max-width: 300px;
-  width: 100%; /* Adjust the width of the images */
-  height: auto; /* Maintain aspect ratio */
-  margin: 0 auto; /* Center the image horizontally */
-  display: block; /* Ensure the image is treated as a block element */
-  border-radius: 5px; /* Add rounded corners to the images */
+  width: 100%; /* Justér bredden af ​​billederne */
+  height: auto; /* Oprethold aspektforholdet */
+  margin: 0 auto; /* Centrér billedet horisontalt */
+  display: block; /* Sørg for, at billedet behandles som et blokelement */
+  border-radius: 5px; /* Tilføj afrundede hjørner til billederne */
   padding: 10px;
 }
 .video-container {
   position: relative;
-  width: 100%; /* Ensure the video fills its container horizontally */
-  padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
-  overflow: hidden; /* Hide any overflowing content */
+  width: 100%; /* Sørg for, at videoen fylder sin beholder horisontalt */
+  padding-bottom: 56.25%; /* 16: 9 aspektforhold (9/16 * 100) */
+  overflow: hidden; /* Skjul eventuelt overskydende indhold */
 }
 
 .video-container iframe {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* Ensure the video fills the container horizontally */
-  height: 100%; /* Ensure the video fills the container vertically */
-  border: 0; /* Remove border */
+  width: 100%; /* Sørg for, at videoen fylder beholderen horisontalt */
+  height: 100%; /* Sørg for, at videoen fylder beholderen vertikalt */
+  border: 0; /* Fjern grænse */
 }
 .container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Equal width columns */
-  gap: 0%; /* Spacing between grid items */
-  padding: 10px; /* Padding inside the container */
+  grid-template-columns: repeat(3, 1fr); /* Lige brede kolonner */
+  gap: 0%; /* Afstand mellem grid-elementer */
+  padding: 10px; /* Polstring inde i beholderen */
 }
 
 .container input[type="text"],
 .container button {
-  grid-column: span 2; /* Make input and button span two columns */
-  width: 100%; /* Inputs and buttons take up full width */
-  padding: 8px; /* Padding inside inputs and buttons */
-  border: 1px solid #ccc; /* Border around inputs and buttons */
-  border-radius: 5px; /* Rounded corners */
-  box-sizing: border-box; /* Include padding and border in width calculation */
-  margin-bottom: 10px; /* Add spacing between input fields */
+  grid-column: span 2; /* Gør input og knap til at fylde to kolonner */
+  width: 100%; /* Input og knapper fylder fuld bredde */
+  padding: 8px; /* Polstring inde i input og knapper */
+  border: 1px solid #ccc; /* Grænse omkring input og knapper */
+  border-radius: 5px; /* Afrundede hjørner */
+  box-sizing: border-box; /* Inkluder polstring og grænse i bredden beregning */
+  margin-bottom: 10px; /* Tilføj afstand mellem inputfelter */
 }
 
 .container button {
-  background-color: #d85739; /* Button background color */
-  color: #fff; /* Text color */
-  cursor: pointer; /* Show pointer on hover */
-  transition: background-color 0.3s; /* Smooth transition */
+  background-color: #d85739; /* Baggrundsfarve for knappen */
+  color: #fff; /* Tekstfarve */
+  cursor: pointer; /* Vis pegepil ved hover */
+  transition: background-color 0.3s; /* Glat overgang */
 }
 
 .container button:hover {
-  background-color: #912710; /* Darker background color on hover */
+  background-color: #912710; /* Mørkere baggrundsfarve ved hover */
 }
 
 .container ul {
   margin: 28px;
 }
 
-/* Style for input fields */
+/* Stil for inputfelter */
 input[type="text"] {
-  width: 50%; /* Make input fields full-width */
-  padding: 10px; /* Add padding */
-  margin-top: 18px; /* Add spacing between input fields */
-  border: 1px solid #ccc; /* Add border */
-  border-radius: 5px; /* Add rounded corners */
-  box-sizing: border-box; /* Include padding and border in width calculation */
+  width: 50%; /* Gør inputfelterne fuld bredde */
+  padding: 10px; /* Tilføj polstring */
+  margin-top: 18px; /* Tilføj afstand mellem inputfelter */
+  border: 1px solid #ccc; /* Tilføj grænse */
+  border-radius: 5px; /* Tilføj afrundede hjørner */
+  box-sizing: border-box; /* Inkluder polstring og grænse i bredden beregning */
   display: flex;
   flex-direction: column;
 }
 
-/* Style for placeholder text */
+/* Stil for placeholder-tekst */
 ::placeholder {
-  color: #999; /* Change placeholder text color */
+  color: #999; /* Ændre farve på pladsholdertekst */
 }
 
-/* Style for button */
+/* Stil for knap */
 .start-timer-btn {
-  color: #ffefef; /* Set text color */
+  color: #ffefef; /* Indstil tekstfarve */
   background-color: #d85739;
-  border: 1px solid #ccc; /* Add border */
-  border-radius: 5px; /* Add rounded corners */
+  border: 1px solid #ccc; /* Tilføj grænse */
+  border-radius: 5px; /* Tilføj afrundede hjørner */
   padding: 10px;
   margin: 5px;
-  cursor: pointer; /* Add cursor pointer on hover */
-  transition: background-color 0.3s ease; /* Add smooth transition */
+  cursor: pointer; /* Tilføj pegepil ved hover */
+  transition: background-color 0.3s ease; /* Tilføj glat overgang */
 }
 
-/* Mobile styles */
+/* Mobil stilarter */
 @media (max-width: 768px) {
   .program-list ul {
     list-style-type: none;
@@ -211,7 +216,7 @@ input[type="text"] {
     height: auto;
     transition: background-color 0.3s ease;
     margin: 7px;
-    border-radius: 200px; /* Add rounded corners to the images */
+    border-radius: 200px; /* Tilføj afrundede hjørner til billeder */
     transition: border-radius 3s;
   }
 
@@ -220,12 +225,12 @@ input[type="text"] {
   }
 
   .program-list li img {
-    width: 100%; /* Adjust the width of the images */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; /* Justér bredden af ​​billederne */
+    height: auto; /* Oprethold aspektforholdet */
   }
 }
 
-/* Media query for smaller screens */
+/* Medieforespørgsel for mindre skærme */
 @media (max-width: 768px) {
   .exercise {
     background-color: #9d6e6e;
@@ -237,14 +242,14 @@ input[type="text"] {
 
   .exercise-list ul {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    grid-gap: 4%; /* Spacing between grid items */
+    grid-template-columns: repeat(2, 1fr); /* 2 kolonner */
+    grid-gap: 4%; /* Afstand mellem grid-elementer */
     list-style-type: none;
     margin-right: 4%;
   }
 
   .exercise.expanded {
-    grid-column: span 2; /* Expand the exercise to fill 2 columns */
+    grid-column: span 2; /* Udvid øvelsen til at fylde 2 kolonner */
   }
 
   .exercise:hover {
@@ -263,22 +268,22 @@ input[type="text"] {
   }
 
   input[type="number"] {
-    width: 100%; /* Make input fields full-width */
-    padding: 10px; /* Add padding */
-    margin-bottom: 10px; /* Add spacing between input fields */
-    border: 1px solid #ccc; /* Add border */
-    border-radius: 5px; /* Add rounded corners */
-    box-sizing: border-box; /* Include padding and border in width calculation */
+    width: 100%; /* Gør inputfelter fuld bredde */
+    padding: 10px; /* Tilføj polstring */
+    margin-bottom: 10px; /* Tilføj afstand mellem inputfelter */
+    border: 1px solid #ccc; /* Tilføj grænse */
+    border-radius: 5px; /* Tilføj afrundede hjørner */
+    box-sizing: border-box; /* Inkluder polstring og grænse i bredden beregning */
     display: flex;
     flex-direction: column;
   }
 
-  /* Style for placeholder text */
+  /* Stil for pladsholdertekst */
   ::placeholder {
-    color: #999; /* Change placeholder text color */
+    color: #999; /* Ændre farve på pladsholdertekst */
   }
 
   #start-timer-btn:hover {
-    background-color: #0056b3; /* Change background color on hover */
+    background-color: #0056b3; /* Ændre baggrundsfarve ved hover */
   }
 }

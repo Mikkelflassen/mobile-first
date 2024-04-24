@@ -4,31 +4,32 @@ body {
   padding: 0;
 }
 
+/* Navigations menu */
 nav {
   background-color: #333;
   color: #fff;
   display: flex;
-  justify-content: flex-start; /* Align items to the left */
+  justify-content: flex-start; 
   align-items: center;
   padding: 10px 20px;
-  position: relative; /* Add position relative */
-  z-index: 2; /* Ensure the navigation bar is above other elements */
+  position: relative; 
+  z-index: 2; 
 }
 
+/* Navigations menu placering */
 .menu1 {
   position: absolute;
   width: 100%;
   top: 0;
-  left: 0; /* Adjusted to start from the left */
-  z-index: 4; /* higher than other elements */
+  left: 0; 
+  z-index: 4; 
   display: flex;
-  justify-content: center; /* Distribute items evenly with space between */
+  justify-content: center; 
 }
 
 .menu1 a {
   color: #fff;
   text-decoration: none;
-
   margin-right: 30px;
   padding: 15px;
   padding-left: 2%;
@@ -37,48 +38,49 @@ nav {
   background-color: #575757;
   border-radius: 20px;
 }
-
+/* Billedet at manden og placeringen sørger for at billedet er bag menuen*/
 header .hero-image {
   width: 100%;
   height: 100vh;
-  background: url("path-to-your-hero-image.jpg") no-repeat center center;
   background-size: cover;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  z-index: 0; /* Ensure the hero image is behind the navigation bar */
+  z-index: 0; 
 }
-
+/* placering af billede sørger for det er fuld størrelse */
 header .hero-image img {
   max-width: 100%;
   height: auto;
-  display: block; /* adjust as needed, depending on your image */
+  display: block; 
 }
 
+/* logo størrelse og placering foran baggrund */
 .logo {
   position: absolute;
   padding-top: 80px;
-  width: 80%; /* Adjust as needed */
+  width: 80%; 
   height: auto;
-  z-index: 3; /* Ensure the logo is on top */
+  z-index: 3; 
 }
-
+/* placering af nav*/
 .menu-container {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 4; /* higher than other elements */
+  z-index: 4; 
   display: none;
 }
 
+/* Burgermenu placering og mus ændre til at den er synlig kilk for brugen */
 .menu-toggle {
   padding: 15px;
   cursor: pointer;
   z-index: 5;
 }
-
+/* Stregerne på burgermenuens placering og udsende */
 .menu-toggle span {
   display: block;
   width: 25px;
@@ -91,7 +93,7 @@ header .hero-image img {
   transform-origin: 1px;
   transition: all 0.3s linear;
 }
-
+/* nav menu */
 .menu {
   display: none;
   flex-direction: column;
@@ -103,60 +105,60 @@ header .hero-image img {
   text-align: left;
   padding: 15px;
 }
-
+/* menu */
 .menu a {
   color: #fff;
   text-decoration: none;
   padding: 10px 15px;
   display: block;
 }
-
+/* ændre farve ved hover */
 .menu a:hover {
   background-color: #575757;
 }
-
+/* artikel smooth transition og farver samt padding og margin for white space */
 .article {
-  transform: translateY(20px); /* Pushed down a bit */
-  transition: opacity 1s ease, transform 1s ease; /* Smooth transitions */
-  background-color: #f2f2f2; /* Light background for the article */
-  color: #333; /* Dark text for readability */
-  padding: 20px; /* Padding around the content */
-  margin-top: 20px; /* Space after the hero image */
+  transform: translateY(20px); 
+  transition: opacity 1s ease, transform 1s ease; 
+  background-color: #f2f2f2; 
+  color: #333; 
+  padding: 20px; 
+  margin-top: 20px; 
   background-color: #e6dfde;
 }
-
+/* white space for paragraferne */
 .article h2,
 .article,
 .article p {
-  margin: 0 0 20px; /* Spacing between paragraphs */
+  margin: 0 0 20px; 
 }
-
+/* styling af brødtekst */
 p {
   font-family: "Arapey", serif;
   font-size: 20px;
   line-height: 1.6;
 }
-
+/* h1 styling */
 h1 {
   font-size: 30px;
   text-align: center;
   font-family: "Arvo", serif;
   font-weight: 400;
 }
-
+/* h2 styling */
 h2 {
   font-family: "Arvo", serif;
   padding-bottom: 5%;
   text-align: center;
   font-weight: 400;
 }
-
+/* h3 styling */
 h3 {
   font-size: 25px;
   font-family: "arvo";
   font-weight: 1;
 }
-
+/* hr styling for at skabe flot design */
 hr {
   border: 0; /* Remove default border */
   height: 1px; /* Set the height of the HR line */
@@ -164,70 +166,74 @@ hr {
   width: 60%;
   margin: 20px auto;
 }
-
+/* læs mere cirkle */
 .article .read-more {
-  color: #c36b54; /* Red color for the 'Read more' link */
+  color: #c36b54; 
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
   margin-top: 15px;
 }
 
-/* CSS for when the article should become visible */
+/* css for at artiklen bliver synlig */
 .article-visible {
   opacity: 1;
   transform: translateY(0px);
 }
+
+/* cirkle placering og udsende*/
 .circle {
-  display: flex; /* Enables flexbox */
-  justify-content: center; /* Centers content horizontally */
-  align-items: center; /* Centers content vertically */
-  width: 150px; /* Width of the circle */
-  height: 150px; /* Height of the circle, same as width to make it round */
-  border-radius: 50%; /* Makes the div circular */
-  background: rgba(255, 99, 71, 0.947); /* Semi-transparent background color */
-  position: absolute; /* Position it over the text */
-  top: 80%; /* Adjust top position to where you want the circle to be */
-  left: 82%; /* Center the circle horizontally */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  width: 150px; 
+  height: 150px; 
+  border-radius: 50%; 
+  background: rgba(255, 99, 71, 0.947); 
+  position: absolute; 
+  top: 80%; 
+  left: 82%; 
   transform: translate(
     -50%,
     -50%
-  ); /* Offset the circle by half its size to truly center it */
-  z-index: 1; /* Ensure it's above the text */
+  ); 
+  z-index: 1; 
 }
-
+/* cirkel text farve og fjerner margin*/
 .circle-text {
-  color: #ffffff; /* Text color */
-  /* Adjust font size and other text styles as needed */
-  margin: 0; /* Remove default margin from h3 */
+  color: #ffffff; 
+  margin: 0; 
 }
 
+/* footer farve og design */
 footer {
   background-color: #898989;
   color: #fff;
   text-align: center;
   padding: 10px 0;
-  position: relative; /* Position relative to its containing block */
-  width: 100%; /* Make the footer span the entire width */
-  margin-top: auto; /* Push the footer to the bottom of its containing block */
+  position: relative; 
+  width: 100%;
+  margin-top: auto; 
 }
+/* footer responsive */
 @media (min-width: 1260px) {
   footer {
     text-align: center;
     padding: 10px 0;
-    position: relative; /* Position relative to its containing block */
-    width: 100%; /* Make the footer span the entire width */
-    margin-top: 11%; /* Push the footer to the bottom of its containing block */
+    position: relative; 
+    width: 100%; 
+    margin-top: 11%; 
   }
 }
 
+/* responsiv body */
 @media (max-width: 983px) {
   body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
   }
-
+ /* footer responsive */
   nav {
     background-color: #333;
     color: #fff;

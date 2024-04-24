@@ -139,6 +139,13 @@ footer {
   width: 100%; /* Gør footeren spanne hele bredden */
 }
 
+hr {
+  border: 0; /* Remove default border */
+  height: 1px; /* Set the height of the HR line */
+  background: #c36b54; /* This sets the color of the HR line */
+  width: 60%;
+  margin: 20px auto; }
+
 @media (max-width: 994px) {
   article {
     display: grid;

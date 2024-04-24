@@ -157,7 +157,7 @@ footer {
 
   .article-text {
     padding-bottom: 20px; /* Adjust as needed for smaller screens */
-    text-align: center;
+    text-align: left;
   }
   .video-container {
     position: relative;

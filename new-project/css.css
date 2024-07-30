@@ -20,7 +20,7 @@ body {
 .program-list li {
   cursor: pointer;
   margin-bottom: 10px;
-  background-color: #d85739;
+  background-color: #006a4e;
   color: #fff;
   padding: 10px;
   border-radius: 5px;
@@ -38,7 +38,7 @@ body {
 }
 
 .program-list li:hover {
-  background-color: #9b2900;
+  background-color: #006a4e;
 }
 
 .exercise-list {
@@ -57,7 +57,7 @@ body {
 .exercise {
   flex: 0 0 calc(33.33% - 20px); /* Subtract 20px from each column */
   margin-bottom: 20px;
-  background-color: #b77461;
+  background-color: #006a4e;
   text-align: center; /* Center the content horizontally */
 }
 
@@ -79,7 +79,7 @@ body {
 
 .exercise h3 {
   margin-bottom: 10px;
-  color: #9b2900;
+  color: #006a4e;
 }
 
 .exercise p {
@@ -149,14 +149,14 @@ body {
 }
 
 .container button {
-  background-color: #d85739; /* Button background color */
+  background-color: #006a4e; /* Button background color */
   color: #fff; /* Text color */
   cursor: pointer; /* Show pointer on hover */
   transition: background-color 0.3s; /* Smooth transition */
 }
 
 .container button:hover {
-  background-color: #912710; /* Darker background color on hover */
+  background-color: #006a4e; /* Darker background color on hover */
 }
 
 .container ul {
@@ -183,7 +183,7 @@ input[type="text"] {
 /* Style for button */
 .start-timer-btn {
   color: #ffefef; /* Set text color */
-  background-color: #d85739;
+  background-color: #006a4e;
   border: 1px solid #ccc; /* Add border */
   border-radius: 5px; /* Add rounded corners */
   padding: 10px;
@@ -201,7 +201,7 @@ input[type="text"] {
 
   .program-list li {
     cursor: pointer;
-    background-color: #d85739;
+    background-color: #006a4e;
     width: 50%;
     height: auto;
     transition: background-color 0.3s ease;
@@ -211,7 +211,7 @@ input[type="text"] {
   }
 
   .program-list li:hover {
-    background-color: #9b2900;
+    background-color: #006a4e;
   }
 
   .program-list li img {
@@ -223,11 +223,11 @@ input[type="text"] {
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .exercise {
-    background-color: #9d6e6e;
+    background-color: #006a4e;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #b77461;
+    background-color: #006a4e;
   }
 
   .exercise-list ul {
@@ -249,7 +249,7 @@ input[type="text"] {
 
   .exercise h3 {
     margin-bottom: 10px;
-    color: #007bff;
+    color: #000000;
   }
 
   .exercise p {
@@ -273,7 +273,4 @@ input[type="text"] {
     color: #999; /* Change placeholder text color */
   }
 
-  #start-timer-btn:hover {
-    background-color: #0056b3; /* Change background color on hover */
-  }
 }

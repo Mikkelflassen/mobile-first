@@ -6,7 +6,7 @@ body {
 
 /* Navigations menu */
 nav {
-  background-color: #333;
+  background-color: #000000;
   color: #fff;
   display: flex;
   justify-content: flex-start;
@@ -35,7 +35,7 @@ nav {
   padding-left: 2%;
   padding-right: 2%;
   font-size: 17px;
-  background-color: #575757;
+  background-color: #006a4e;
   border-radius: 20px;
 }
 /* Billedet at manden og placeringen sørger for at billedet er bag menuen*/
@@ -101,7 +101,7 @@ header .hero-image img {
   top: 45px;
   left: 0;
   width: fixed; /* or fixed width */
-  background-color: #333;
+  background-color: #000000;
   text-align: left;
   padding: 15px;
 }
@@ -114,17 +114,17 @@ header .hero-image img {
 }
 /* ændre farve ved hover */
 .menu a:hover {
-  background-color: #575757;
+  background-color: #006a4e;
 }
 /* artikel smooth transition og farver samt padding og margin for white space */
 .article {
   transform: translateY(20px);
   transition: opacity 1s ease, transform 1s ease;
-  background-color: #f2f2f2;
-  color: #333;
+  background-color: #ffffff;
+  color: #000000;
   padding: 20px;
   margin-top: 20px;
-  background-color: #e6dfde;
+  background-color: #ffffff;
 }
 /* white space for paragraferne */
 .article h2,
@@ -162,13 +162,13 @@ h3 {
 hr {
   border: 0; /* Remove default border */
   height: 1px; /* Set the height of the HR line */
-  background: #c36b54; /* This sets the color of the HR line */
+  background: #006a4e; /* This sets the color of the HR line */
   width: 60%;
   margin: 20px auto;
 }
 /* læs mere cirkle */
 .article .read-more {
-  color: #c36b54;
+  color: #006a4e;
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
@@ -189,7 +189,7 @@ hr {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background: rgba(255, 99, 71, 0.947);
+  background: rgba(0, 106, 78);
   position: absolute;
   top: 80%;
   left: 82%;
@@ -232,7 +232,7 @@ footer {
   }
   /* Responsivitet for navigationsmenuen */
   nav {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -251,7 +251,7 @@ footer {
   }
 
   .menu1 a {
-    color: #d82d2d;
+    color: #006a4e;
     text-decoration: none;
     margin-right: 20px;
     z-index: 4;
@@ -295,7 +295,7 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #333;
+    background-color: #000000;
     z-index: 2;
     display: block;
   }
@@ -326,7 +326,7 @@ footer {
     top: 45px;
     left: 0;
     width: fixed; /* eller fast bredde */
-    background-color: #333;
+    background-color: #000000;
     text-align: left;
     padding: 15px;
   }
@@ -346,7 +346,7 @@ footer {
     transform: translateY(20px);
     transition: opacity 1s ease, transform 1s ease;
     background-color: #f2f2f2;
-    color: #333;
+    color: #000000;
     padding: 20px;
     margin-top: 20px;
     background-color: #e6dfde;
@@ -381,13 +381,13 @@ footer {
   hr {
     border: 0;
     height: 1px;
-    background: #c36b54;
+    background: #006a4e;
     width: 60%;
     margin: 20px auto;
   }
 
   .article .read-more {
-    color: #c36b54;
+    color: #006a4e;
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
@@ -406,7 +406,7 @@ footer {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: rgba(255, 99, 71, 0.897);
+    background: rgba(0, 106, 78);
     position: absolute;
     top: 80%;
     left: 80%;

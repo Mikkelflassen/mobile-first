@@ -1,11 +1,6 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: rgba(
-    155,
-    130,
-    124,
-    0.25
-  ); /* Justér gennemsigtigheden til 25% */
+  background-color: #006a4e; /* Justér gennemsigtigheden til 25% */
 }
 
 .program-list {
@@ -25,7 +20,7 @@ body {
 .program-list li {
   cursor: pointer;
   margin-bottom: 10px;
-  background-color: #d85739;
+  background-color: #006a4e;
   color: #fff;
   padding: 10px;
   border-radius: 5px;
@@ -43,7 +38,7 @@ body {
 }
 
 .program-list li:hover {
-  background-color: #9b2900;
+  background-color: #006a4e;
 }
 
 .exercise-list {
@@ -67,7 +62,7 @@ body {
 .exercise {
   flex: 0 0 calc(33.33% - 20px); /* Træk 20px fra hver kolonne */
   margin-bottom: 20px;
-  background-color: #b77461;
+  background-color: #006a4e;
   text-align: center; /* Centrér indholdet horisontalt */
 }
 
@@ -89,7 +84,7 @@ body {
 
 .exercise h3 {
   margin-bottom: 10px;
-  color: #9b2900;
+  color: #006a4e;
 }
 
 .exercise p {
@@ -159,14 +154,14 @@ body {
 }
 
 .container button {
-  background-color: #d85739; /* Baggrundsfarve for knappen */
+  background-color: #006a4e; /* Baggrundsfarve for knappen */
   color: #fff; /* Tekstfarve */
   cursor: pointer; /* Vis pegepil ved hover */
   transition: background-color 0.3s; /* Glat overgang */
 }
 
 .container button:hover {
-  background-color: #912710; /* Mørkere baggrundsfarve ved hover */
+  background-color: #006a4e; /* Mørkere baggrundsfarve ved hover */
 }
 
 .container ul {
@@ -193,7 +188,7 @@ input[type="text"] {
 /* Stil for knap */
 .start-timer-btn {
   color: #ffefef; /* Indstil tekstfarve */
-  background-color: #d85739;
+  background-color: #006a4e;
   border: 1px solid #ccc; /* Tilføj grænse */
   border-radius: 5px; /* Tilføj afrundede hjørner */
   padding: 10px;
@@ -211,7 +206,7 @@ input[type="text"] {
 
   .program-list li {
     cursor: pointer;
-    background-color: #d85739;
+    background-color: #006a4e;
     width: 50%;
     height: auto;
     transition: background-color 0.3s ease;
@@ -221,7 +216,7 @@ input[type="text"] {
   }
 
   .program-list li:hover {
-    background-color: #9b2900;
+    background-color: #006a4e;
   }
 
   .program-list li img {
@@ -233,11 +228,11 @@ input[type="text"] {
 /* Medieforespørgsel for mindre skærme */
 @media (max-width: 768px) {
   .exercise {
-    background-color: #9d6e6e;
+    background-color: #006a4e;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #b77461;
+    background-color: #006a4e;
   }
 
   .exercise-list ul {
@@ -283,7 +278,6 @@ input[type="text"] {
     color: #999; /* Ændre farve på pladsholdertekst */
   }
 
-  #start-timer-btn:hover {
-    background-color: #0056b3; /* Ændre baggrundsfarve ved hover */
+  
   }
 }
